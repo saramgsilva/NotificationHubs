@@ -26,11 +26,11 @@ Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Register devices using WebA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationHubSamples.Win8UsingWebApi", "NotificationHubSamples.Win8UsingWebApi\NotificationHubSamples.Win8UsingWebApi.csproj", "{A501DB54-B73D-4777-9666-AFF7D522B0A3}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationHubSamples.Win8UsingWebApi.WindowsPhone", "NotificationHubSamples.Win8UsingWebApi.WindowsPhone\NotificationHubSamples.Win8UsingWebApi.WindowsPhone.csproj", "{3D56262B-D385-4EC0-AE12-E382A1F6813E}"
-EndProject
 Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "NotificationHubSamples.Win8UsingWebApi.Shared", "NotificationHubSamples.Win8UsingWebApi.Shared\NotificationHubSamples.Win8UsingWebApi.Shared.shproj", "{DC4C4EFB-F4FC-4167-8C6C-B011219E963B}"
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationHubsSamples.DroidUsingWebApi", "NotificationHubsSamples.DroidUsingWebApi\NotificationHubsSamples.DroidUsingWebApi.csproj", "{694A418B-0DE3-4B9D-9C19-7993848C0E42}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "NotificationHubSamples.WindowsPhoneUsingWebApi", "NotificationHubSamples.WindowsPhoneUsingWebApi\NotificationHubSamples.WindowsPhoneUsingWebApi.csproj", "{3D56262B-D385-4EC0-AE12-E382A1F6813E}"
 EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
@@ -115,6 +115,18 @@ Global
 		{A501DB54-B73D-4777-9666-AFF7D522B0A3}.Release|x86.ActiveCfg = Release|x86
 		{A501DB54-B73D-4777-9666-AFF7D522B0A3}.Release|x86.Build.0 = Release|x86
 		{A501DB54-B73D-4777-9666-AFF7D522B0A3}.Release|x86.Deploy.0 = Release|x86
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|ARM.ActiveCfg = Debug|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|x64.ActiveCfg = Debug|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|x86.ActiveCfg = Debug|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|Any CPU.Build.0 = Release|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|ARM.ActiveCfg = Release|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|x64.ActiveCfg = Release|Any CPU
+		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|x86.ActiveCfg = Release|Any CPU
 		{3D56262B-D385-4EC0-AE12-E382A1F6813E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{3D56262B-D385-4EC0-AE12-E382A1F6813E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{3D56262B-D385-4EC0-AE12-E382A1F6813E}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
@@ -135,18 +147,6 @@ Global
 		{3D56262B-D385-4EC0-AE12-E382A1F6813E}.Release|x86.ActiveCfg = Release|x86
 		{3D56262B-D385-4EC0-AE12-E382A1F6813E}.Release|x86.Build.0 = Release|x86
 		{3D56262B-D385-4EC0-AE12-E382A1F6813E}.Release|x86.Deploy.0 = Release|x86
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|ARM.ActiveCfg = Debug|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|x64.ActiveCfg = Debug|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Debug|x86.ActiveCfg = Debug|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|Any CPU.Build.0 = Release|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|Any CPU.Deploy.0 = Release|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|ARM.ActiveCfg = Release|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|x64.ActiveCfg = Release|Any CPU
-		{694A418B-0DE3-4B9D-9C19-7993848C0E42}.Release|x86.ActiveCfg = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
@@ -157,8 +157,8 @@ Global
 		{53287B01-19B1-4340-B90D-FCF013C0F544} = {41CF9470-4C6D-4FAE-A841-C69EC4935995}
 		{62DF0239-4262-49EA-B4E8-FE9654787BB9} = {C8F50A00-E53C-4D8E-A332-328023AA3D75}
 		{A501DB54-B73D-4777-9666-AFF7D522B0A3} = {41CF9470-4C6D-4FAE-A841-C69EC4935995}
-		{3D56262B-D385-4EC0-AE12-E382A1F6813E} = {41CF9470-4C6D-4FAE-A841-C69EC4935995}
 		{DC4C4EFB-F4FC-4167-8C6C-B011219E963B} = {41CF9470-4C6D-4FAE-A841-C69EC4935995}
 		{694A418B-0DE3-4B9D-9C19-7993848C0E42} = {41CF9470-4C6D-4FAE-A841-C69EC4935995}
+		{3D56262B-D385-4EC0-AE12-E382A1F6813E} = {41CF9470-4C6D-4FAE-A841-C69EC4935995}
 	EndGlobalSection
 EndGlobal
