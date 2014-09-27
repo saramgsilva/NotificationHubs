@@ -3,7 +3,6 @@ Notification Hubs Demos
 
 Demos I used in my talk in TechRefresh (Microsoft)
 
-See more here:
 > [Slides & Demos](http://www.saramgsilva.com/index.php/2014/mobile-notification-for-any-device-using-azure-notification-hubs/)
 
 >[[Azure] Notification Hubs – All resources you need](http://www.saramgsilva.com/index.php/2014/azure-notification-hubs-all-resources-you-need/)
@@ -15,8 +14,8 @@ ________________________________________________________________________________
 Helper
 ================
 For run the demos you should:
-1º Create a Notification Hub in Azure Website;
-2º Add HubName and Connection String to each demo;
+*1st Create a Notification Hub in Azure Portal;
+*2nd Add HubName and Connection String to each demo;
 
 > For IOS
 Create Apple Certificate and add this to the project and go to the Notification Hub>Configure>Apple Certificate
