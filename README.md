@@ -14,8 +14,11 @@ ________________________________________________________________________________
 Helper
 ================
 For run the demos you should:
-*1st Create a Notification Hub in Azure Portal;
-*2nd Add HubName and Connection String to each demo;
+
+  * 1st Create a Notification Hub in Azure Portal;
+  
+  * 2nd Add HubName and Connection String to each demo;
+
 
 > For IOS
 Create Apple Certificate and add this to the project and go to the Notification Hub>Configure>Apple Certificate
