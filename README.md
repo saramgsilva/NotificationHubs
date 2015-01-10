@@ -3,7 +3,7 @@ Azure Notification Hubs Sample
 
 ## :white_medium_square: What is this?
 
-The sample provided has the goal to help developers implement Push Notification in mobile applications and this sample supports the two main ways to manage devices in Notification Hubs:
+The sample provided has the goal to help developers implement Push Notification, through Azure Notification Hubs, in mobile applications and this sample supports the two main ways to manage devices in Notification Hubs:
 
 * Case 1 - Devices register directly in Notification Hubs 
 * Case 2 - Devices register in Notification Hubs through backend
@@ -12,8 +12,8 @@ The sample provided has the goal to help developers implement Push Notification 
 :white_medium_square: Requirements
 ================
 
-* Create the Notification Hubs, in Azure Portal (Azure Mobile Service create it by default)
-* Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification in each Platform
+* Create the Notification Hubs in Azure Portal (Azure Mobile Service create it by default)
+* Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification for each Platform
 * Configure the Notification Hub, in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
 * Add connectiong string and hub name from the Notification Hub created (in the sample it is defined in [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs))
 
@@ -41,9 +41,7 @@ Cordova |  :x: | :x:| :x:| :x:
 
 1. The Case V1 was created in June 2014 following the documentation, but it changed and the Case 2 V2 was created to show the new version. At the end all version will work and for example the Azure Mobile Services will uses a solution similar to the Case 2 V1.
 
-2. The IOS Native Demo was created for a presentation by [Edgar Clérigo](https://twitter.com/clerigo)
-
-3. For Cordova apps, is possible to read about it in the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
+2. For Cordova apps, see the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
 
 
 :white_medium_square: The Solution
@@ -61,6 +59,9 @@ The solution have two main cases:
 </MTMarkdownOptions>  
 
 
+:warning: The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs) should be define because it is required to the sample works.
+
+
 > Solution with folders expanded
 
 <MTMarkdownOptions output='html4'>
@@ -68,13 +69,10 @@ The solution have two main cases:
 </MTMarkdownOptions>  
 
 
-:warning: The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs) should be define because it is required to the sample works.
-
-
 :white_medium_square: Screenshots
 ================
 
-The [SceenShots folder](https://github.com/saramgsilva/NotificationHubs/tree/master/ScreenShots) contains image for each platform provided.
+The [Sceenshots folder](https://github.com/saramgsilva/NotificationHubs/tree/master/ScreenShots) contains image for each platform provided.
 
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/Windows%20Sample%20-%201%20-%20Registration%20&%20Notification.png"> 
@@ -90,7 +88,7 @@ The [SceenShots folder](https://github.com/saramgsilva/NotificationHubs/tree/mas
 <a href="http://www.saramgsilva.com/index.php/2014/mobile-notification-for-any-device-using-azure-notification-hubs/" target="_blank"><img align="middle" src="http://s20.postimg.org/xt7iab6jh/presentation.png"> </a>
 </MTMarkdownOptions>  
 
-> [Documentation at MSDN] (http://msdn.microsoft.com/en-us/library/jj891130.aspx)
+> [MSDN Documentation] (http://msdn.microsoft.com/en-us/library/jj891130.aspx)
 
 > [Curah! Notification Hubs] (https://curah.microsoft.com/72603/notification-hubs)
 
@@ -156,13 +154,15 @@ To develop on this project, just clone the project to your computer, package res
 
 
 
-:white_medium_square: Contributions
+:white_medium_square: Contributors
 ================
 
-
-[Sara Silva aka saramgsilva](https://twitter.com/saramgsilva)
-
-[Edgar Clérigo](https://twitter.com/clerigo)
+<MTMarkdownOptions output='html4'>
+  	<a href="https://twitter.com/saramgsilva"><img src="http://saramgsilva.github.io/NotificationHubs/images/Eu_400x400.png" height="50"/></a>
+		<a href="https://twitter.com/paulomorgado"><img src="http://saramgsilva.github.io/NotificationHubs/images/PauloMorgado_320x240_400x400.jpg" height="50"/></a>
+		<a href="https://twitter.com/adpead"><img src="http://saramgsilva.github.io/NotificationHubs/images/gn8frj8ipi0rsntcvcd0_400x400.jpeg"/ height="50"></a>
+		<a href="https://twitter.com/clerigo"><img src="http://saramgsilva.github.io/NotificationHubs/images/EbslN-rW_400x400.jpeg"/ height="50"></a>	</p>
+</MTMarkdownOptions>  
 
 
 :white_medium_square: Contribute
