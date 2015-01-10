@@ -3,21 +3,10 @@ Azure Notification Hubs Sample
 
 ## :white_medium_square: What is this?
 
-The sample provided has the goal to help developers implement Push Notification in mobile applications, more specific in Windows and Xamarin applications. The sample support the two main ways to manage devices in Notification Hubs:
+The sample provided has the goal to help developers implement Push Notification in mobile applications and this sample supports the two main ways to manage devices in Notification Hubs:
 
 * Case 1 - Devices register directly in Notification Hubs 
 * Case 2 - Devices register in Notification Hubs through backend
-
-
-This demos does not support:
-
-> Android Native apps 
-
-> IOS Native Apps ( :warning: IOS Native is only supported for the Case 1)
-
-> Cordova apps
-
-:warning: Is possible to read about it in the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
 
 
 :white_medium_square: Requirements
@@ -41,16 +30,20 @@ Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_ch
 Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   | :white_check_mark: 
 Windows Phone 8.1 (SL)| :x: | :x: | :x:| :x:
 Windows Phone 8.0 (SL)| :x: | :x:| :x:| :x:
-Xamarin Android | :white_check_mark: | :white_check_mark:  | :white_check_mark:   | :white_check_mark:  
+Xamarin Android | :white_check_mark: | :white_check_mark:  | :white_check_mark:   | :white_check_mark: 
 Xamarin IOS | :wrench: | :wrench:| :wrench:| :wrench:
+Android Native |  :x:  | :x:| :x:| :x:
 IOS Native | :white_check_mark:   | :x:| :x:| :x:
-
+Cordova |  :x: | :x:| :x:| :x:
 
 :warning: Notes:
 
-1. The IOS Native Demo was created for a presentation by [Edgar Clérigo](https://twitter.com/clerigo)
 
-2. The Case V1 was created in June 2014 following the documentation, but it changed and the Case 2 V2 was created to show the new version. At the end all version will work and for example the Azure Mobile Services will uses a solution similar to the Case 2 V1.
+1. The Case V1 was created in June 2014 following the documentation, but it changed and the Case 2 V2 was created to show the new version. At the end all version will work and for example the Azure Mobile Services will uses a solution similar to the Case 2 V1.
+
+2. The IOS Native Demo was created for a presentation by [Edgar Clérigo](https://twitter.com/clerigo)
+
+3. For Cordova apps, is possible to read about it in the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
 
 
 :white_medium_square: The Solution
