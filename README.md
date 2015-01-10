@@ -22,7 +22,7 @@ Requirements
 
 * Create the Notification Hubs at Azure Portal (Azure Mobile Service create it by default)
 * Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification in each Platform
-* Configure the Notification Hubs with the data from Push Notification Services (WNS, GCM, APNs...)
+* Configure the Notification Hub, in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
 * Add connectiong string and hub name from Notification Hub (in the sample it is defined in [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs))
 
 
