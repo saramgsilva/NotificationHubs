@@ -1,81 +1,306 @@
-<!DOCTYPE html>
+<!doctype html>
 <html>
-
   <head>
-    <meta charset='utf-8'>
+    <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="chrome=1">
-    <meta name="description" content="Azure Notification Hubs : Demos used in Microsoft TechRefresh about Azure Notification Hubs">
+    <title>Azure Notification Hubs by saramgsilva</title>
 
-    <link rel="stylesheet" type="text/css" media="screen" href="stylesheets/stylesheet.css">
-
-    <title>Azure Notification Hubs</title>
+    <link rel="stylesheet" href="stylesheets/styles.css">
+    <link rel="stylesheet" href="stylesheets/pygment_trac.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no">
+    <!--[if lt IE 9]>
+    <script src="//html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
   </head>
-
   <body>
+    <div class="wrapper">
+      <header>
+        <h1>Azure Notification Hubs</h1>
+        <p>Demos used in Microsoft TechRefresh about Azure Notification Hubs</p>
 
-    <!-- HEADER -->
-    <div id="header_wrap" class="outer">
-        <header class="inner">
-          <a id="forkme_banner" href="https://github.com/saramgsilva/NotificationHubs">View on GitHub</a>
+        <p class="view"><a href="https://github.com/saramgsilva/NotificationHubs">View the Project on GitHub <small>saramgsilva/NotificationHubs</small></a></p>
 
-          <h1 id="project_title">Azure Notification Hubs</h1>
-          <h2 id="project_tagline">Demos used in Microsoft TechRefresh about Azure Notification Hubs</h2>
 
-            <section id="downloads">
-              <a class="zip_download_link" href="https://github.com/saramgsilva/NotificationHubs/zipball/master">Download this project as a .zip file</a>
-              <a class="tar_download_link" href="https://github.com/saramgsilva/NotificationHubs/tarball/master">Download this project as a tar.gz file</a>
-            </section>
-        </header>
-    </div>
-
-    <!-- MAIN CONTENT -->
-    <div id="main_content_wrap" class="outer">
-      <section id="main_content" class="inner">
+        <ul>
+          <li><a href="https://github.com/saramgsilva/NotificationHubs/zipball/master">Download <strong>ZIP File</strong></a></li>
+          <li><a href="https://github.com/saramgsilva/NotificationHubs/tarball/master">Download <strong>TAR Ball</strong></a></li>
+          <li><a href="https://github.com/saramgsilva/NotificationHubs">View On <strong>GitHub</strong></a></li>
+        </ul>
+      </header>
+      <section>
         <h1>
-<a name="notification-hubs-demos" class="anchor" href="#notification-hubs-demos"><span class="octicon octicon-link"></span></a>Notification Hubs Demos</h1>
+<a id="azure-notification-hubs-sample" class="anchor" href="#azure-notification-hubs-sample" aria-hidden="true"><span class="octicon octicon-link"></span></a>Azure Notification Hubs Sample</h1>
 
-<p>Demos used in Microsoft TechRefresh about Azure Notification Hubs</p>
+<h2>
+<a id="black_medium_square-what-is-this" class="anchor" href="#black_medium_square-what-is-this" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> What is this?</h2>
 
-<blockquote>
-<p><a href="http://www.saramgsilva.com/index.php/2014/mobile-notification-for-any-device-using-azure-notification-hubs/">Slides &amp; Demos</a></p>
-
-<p><a href="http://www.saramgsilva.com/index.php/2014/azure-notification-hubs-all-resources-you-need/">[Azure] Notification Hubs – All resources you need</a></p>
-</blockquote>
-
-<hr><h1>
-<a name="helper" class="anchor" href="#helper"><span class="octicon octicon-link"></span></a>Helper</h1>
-
-<p>For run the demos you should:</p>
+<p>The sample provided has the goal to help developers implement Push Notification in mobile applications, more specific in Windows and Xamarin applications. The sample support the two main ways to manage devices in Notification Hubs:</p>
 
 <ul>
-<li><p>1st Create a <a href="http://msdn.microsoft.com/en-us/library/azure/jj927170.aspx">Notification Hub</a> in <a href="https://manage.windowsazure.com/">Azure Portal</a>;</p></li>
-<li><p>2nd Add HubName and Connection String to each demo;</p></li>
-</ul><blockquote>
-<p>For IOS
-Create Apple Certificate and add this to the project and go to the Notification Hub&gt;Configure&gt;Apple Certificate</p>
+<li>Case 1 - Devices register directly in Notification Hubs </li>
+<li>Case 2 - Devices register in Notification Hubs through backend</li>
+</ul>
 
-<p>For Android
-Create the Project to get the Server Key and add this key go to the Notification Hub&gt;Configure&gt;Google
-If you are using simulator use one that has Google Apps or Google Apis and connect you google accoun;</p>
+<p>This demos does not support:</p>
 
-<p>For Windows and Windows Phone 8.1 Runtime
-Associate the demo to the store
-Go to the application page in the store &gt; details&gt; and click the url for get WNS information and go to Notification Hub&gt;Configure&gt;Windows</p>
-
-<p>For Xamarin.Android
-If you are using simulator and do the deploy for install the app or debug it, you can receive Push Notification while the app run, but if you stop and try to send another Push Notification the simulator will not receive it, you should run again the app without VS to get the push notification</p>
+<blockquote>
+<p>Android Native apps </p>
 </blockquote>
-      </section>
-    </div>
 
-    <!-- FOOTER  -->
-    <div id="footer_wrap" class="outer">
-      <footer class="inner">
-        <p class="copyright">Azure Notification Hubs maintained by <a href="https://github.com/saramgsilva">saramgsilva</a></p>
-        <p>Published with <a href="http://pages.github.com">GitHub Pages</a></p>
+<p><img class="emoji" title=":warning:" alt=":warning:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" height="20" width="20" align="absmiddle"> IOS Native is only supported for the Case 1</p>
+
+<blockquote>
+<p>Cordova apps, but is possible to read about it in the article <a href="http://msdn.microsoft.com/en-us/magazine/dn879353.aspx">MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure</a> by <a href="http://msdn.microsoft.com/en-us/magazine/dn879353.aspx">Glenn Gailey</a>.</p>
+</blockquote>
+
+<h1>
+<a id="black_medium_square-requirements" class="anchor" href="#black_medium_square-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Requirements</h1>
+
+<ul>
+<li>Create the Notification Hubs at Azure Portal (Azure Mobile Service create it by default)</li>
+<li>Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification in each Platform</li>
+<li>Configure the Notification Hub, in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)</li>
+<li>Add connectiong string and hub name from the Notification Hub created (in the sample it is defined in <a href="https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs">Contants.cs file</a>)</li>
+</ul>
+
+<h1>
+<a id="black_medium_square-sample-status" class="anchor" href="#black_medium_square-sample-status" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Sample Status</h1>
+
+<ul>
+<li>
+<strong>Key:</strong> <img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"> = Supported,  <img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"> = Not Supported, <img class="emoji" title=":wrench:" alt=":wrench:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f527.png" height="20" width="20" align="absmiddle"> = In development </li>
+</ul>
+
+<table>
+<thead>
+<tr>
+<th align="left">Platform</th>
+<th align="left">Case 1</th>
+<th align="left">Case 2 using WebAPI (V1)</th>
+<th align="left">Case 2 using WebAPI (V2)</th>
+<th align="left">Case 2 using AMS (V2)</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Windows Store 8.1 (WinRT)</td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left">Windows Phone 8.1 (WinRT)</td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left">Windows Phone 8.1 (SL)</td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left">Windows Phone 8.0 (SL)</td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left">Xamarin Android</td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left">Xamarin IOS</td>
+<td align="left"><img class="emoji" title=":wrench:" alt=":wrench:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f527.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":wrench:" alt=":wrench:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f527.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":wrench:" alt=":wrench:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f527.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":wrench:" alt=":wrench:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f527.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left">IOS Native</td>
+<td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+</tbody>
+</table>
+
+<p><img class="emoji" title=":warning:" alt=":warning:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" height="20" width="20" align="absmiddle"> Notes:</p>
+
+<ol>
+<li><p>The IOS Native Demo was created for a presentation by <a href="https://twitter.com/clerigo">Edgar Clérigo</a></p></li>
+<li><p>The Case V1 was created in June 2014 following the documentation, but it changed and the Case 2 V2 was created to show the new version. At the end all version will work and for example the Azure Mobile Services will uses a solution similar to the Case 2 V1.</p></li>
+</ol>
+
+<h1>
+<a id="black_medium_square-the-solution" class="anchor" href="#black_medium_square-the-solution" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> The Solution</h1>
+
+<p>The solution have two main cases:</p>
+
+<ul>
+<li>Case 1 - Devices register directly in Notification Hubs </li>
+<li>Case 2 - Devices register in Notification Hubs through backend</li>
+</ul>
+
+<blockquote>
+<p>Solution with folders minimized</p>
+</blockquote>
+
+<p><img src="ScreenShots/FinalSolution-Close.png?raw=true" alt=""></p>
+
+<blockquote>
+<p>Solution with folders expanded</p>
+</blockquote>
+
+<p><img src="ScreenShots/FinalSolution-Open.png?raw=true" alt=""></p>
+
+<p><img class="emoji" title=":warning:" alt=":warning:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" height="20" width="20" align="absmiddle"> The <a href="https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs">Contants.cs file</a> should be define because it is required to the sample works.</p>
+
+<h1>
+<a id="black_medium_square-screenshots" class="anchor" href="#black_medium_square-screenshots" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Screenshots</h1>
+
+<p>The <a href="https://github.com/saramgsilva/NotificationHubs/tree/master/ScreenShots">SceenShots folder</a> contains image for each platform provided.</p>
+
+<p><img src="ScreenShots/Windows%20Sample%20-%201%20-%20Registration%20&amp;%20Notification.png?raw=true" alt=""></p>
+
+<h1>
+<a id="black_medium_square-resources" class="anchor" href="#black_medium_square-resources" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Resources</h1>
+
+<blockquote>
+<p><a href="http://www.saramgsilva.com/index.php/2014/mobile-notification-for-any-device-using-azure-notification-hubs/">Presentation</a></p>
+
+<p><a href="http://www.saramgsilva.com/index.php/2014/azure-notification-hubs-all-resources-you-need/">Azure Notification Hubs – All resources you need</a></p>
+
+<p><a href="https://curah.microsoft.com/72603/notification-hubs">Curah! Notification Hubs</a></p>
+
+<p><a href="http://msdn.microsoft.com/en-us/library/jj891130.aspx">Documentation at MSDN</a></p>
+</blockquote>
+
+<h1>
+<a id="black_medium_square-common-issues" class="anchor" href="#black_medium_square-common-issues" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Common Issues</h1>
+
+<blockquote>
+<p>In General  </p>
+</blockquote>
+
+<ul>
+<li>The connection string from Notification Hubs is wrong;</li>
+<li>The xml/json that define the template are not well defined;</li>
+<li>When debug the notification is not using the correct tag or forget to use the tag;</li>
+<li>Is missing the configurations in Azure Portal for each application;</li>
+<li>In Azure Mobile Services developers uses the Notification Hubs API to manage devices and it is not necessary because Azure Mobile Service give us it out-of-box;</li>
+<li>When developers implement the registration in devices do not use the debug feature to verify if the devices was registered correctly; </li>
+</ul>
+
+<blockquote>
+<p>In Windows apps:</p>
+</blockquote>
+
+<ul>
+<li>In manifest should be defined the Toast capable;</li>
+<li>In manifest should be defined the Internet capability;</li>
+<li>Associate with store;</li>
+</ul>
+
+<blockquote>
+<p>In Android apps:</p>
+</blockquote>
+
+<ul>
+<li>The Project Id is wrong;</li>
+<li>The GCM component is missing;</li>
+<li>In debug mode, after stop the debug be aware that is need to run again the app to receive the notifications;</li>
+<li>The manifest file must have the package's name starting with lower case;</li>
+<li>The key used in the payload is not the same in the application;</li>
+</ul>
+
+<h1>
+<a id="black_medium_square-tips" class="anchor" href="#black_medium_square-tips" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Tips</h1>
+
+<blockquote>
+<p>Push Notification Service by Platform</p>
+</blockquote>
+
+<table>
+<thead>
+<tr>
+<th align="left">Platform</th>
+<th align="left">Push Notification Service</th>
+</tr>
+</thead>
+<tbody>
+<tr>
+<td align="left">Windows Store 8.1 (WinRT)</td>
+<td align="left">Windows Push Notification Services (WNS)</td>
+</tr>
+<tr>
+<td align="left">Windows Phone 8.1 (WinRT)</td>
+<td align="left">Windows Push Notification Services (WNS)</td>
+</tr>
+<tr>
+<td align="left">Windows Phone 8.1 (SL)</td>
+<td align="left">Microsoft Push Notification Service (MPNS)</td>
+</tr>
+<tr>
+<td align="left">Windows Phone 8.0 (SL)</td>
+<td align="left">Microsoft Push Notification Service (MPNS)</td>
+</tr>
+<tr>
+<td align="left">Xamarin Android</td>
+<td align="left">Google Cloud Service (GCM)</td>
+</tr>
+<tr>
+<td align="left">Xamarin IOS</td>
+<td align="left">Apple Push Notification Service (APNs)</td>
+</tr>
+</tbody>
+</table>
+
+<blockquote>
+<p>Development In Xamarin.Android</p>
+</blockquote>
+
+<p>If you are using simulator and do the deploy for install the app or debug it, you can receive Push Notification while the app run, but if you stop and try to send another Push Notification the simulator will not receive it, you should run again the app without VS to get the push notification</p>
+
+<h1>
+<a id="black_medium_square-build-the-project" class="anchor" href="#black_medium_square-build-the-project" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Build the project</h1>
+
+<p>To develop on this project, just clone the project to your computer, package restore is enable so build the solution first, if you get any errors try to build again and if necessary close the solution and open again to load the references.</p>
+
+<h1>
+<a id="black_medium_square-contributions" class="anchor" href="#black_medium_square-contributions" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Contributions</h1>
+
+<p><a href="https://twitter.com/saramgsilva">Sara Silva aka saramgsilva</a></p>
+
+<p><a href="https://twitter.com/clerigo">Edgar Clérigo</a></p>
+
+<h1>
+<a id="black_medium_square-contribute" class="anchor" href="#black_medium_square-contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> Contribute</h1>
+
+<p>Everbody is welcome to contribute, it cloud be interesting to have IOS Native and Android Native support, or even backend using others programming languages.</p>
+
+<p>Twitter hashtag : <a href="https://twitter.com/search?q=%23notificationhubs&amp;src=typd">#notificationhubs</a></p>
+
+<h1>
+<a id="black_medium_square-license" class="anchor" href="#black_medium_square-license" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":black_medium_square:" alt=":black_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fc.png" height="20" width="20" align="absmiddle"> License</h1>
+
+<p>MIT License (MIT), read more about it in the <a href="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/LICENSE.txt">LICENSE file</a>.</p>
+      </section>
+      <footer>
+        <p>This project is maintained by <a href="https://github.com/saramgsilva">saramgsilva</a></p>
+        <p><small>Hosted on GitHub Pages &mdash; Theme by <a href="https://github.com/orderedlist">orderedlist</a></small></p>
       </footer>
     </div>
-
+    <script src="javascripts/scale.fix.js"></script>
               <script type="text/javascript">
             var gaJsHost = (("https:" == document.location.protocol) ? "https://ssl." : "http://www.");
             document.write(unescape("%3Cscript src='" + gaJsHost + "google-analytics.com/ga.js' type='text/javascript'%3E%3C/script%3E"));
@@ -86,7 +311,6 @@ If you are using simulator and do the deploy for install the app or debug it, yo
             pageTracker._trackPageview();
             } catch(err) {}
           </script>
-
 
   </body>
 </html>
