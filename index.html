@@ -34,24 +34,12 @@
 <h2>
 <a id="white_medium_square-what-is-this" class="anchor" href="#white_medium_square-what-is-this" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> What is this?</h2>
 
-<p>The sample provided has the goal to help developers implement Push Notification in mobile applications, more specific in Windows and Xamarin applications. The sample support the two main ways to manage devices in Notification Hubs:</p>
+<p>The sample provided has the goal to help developers implement Push Notification in mobile applications and this sample supports the two main ways to manage devices in Notification Hubs:</p>
 
 <ul>
 <li>Case 1 - Devices register directly in Notification Hubs </li>
 <li>Case 2 - Devices register in Notification Hubs through backend</li>
 </ul>
-
-<p>This demos does not support:</p>
-
-<blockquote>
-<p>Android Native apps </p>
-
-<p>IOS Native Apps ( <img class="emoji" title=":warning:" alt=":warning:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" height="20" width="20" align="absmiddle"> IOS Native is only supported for the Case 1)</p>
-
-<p>Cordova apps</p>
-</blockquote>
-
-<p><img class="emoji" title=":warning:" alt=":warning:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" height="20" width="20" align="absmiddle"> Is possible to read about it in the article <a href="http://msdn.microsoft.com/en-us/magazine/dn879353.aspx">MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure</a> by <a href="http://msdn.microsoft.com/en-us/magazine/dn879353.aspx">Glenn Gailey</a>.</p>
 
 <h1>
 <a id="white_medium_square-requirements" class="anchor" href="#white_medium_square-requirements" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Requirements</h1>
@@ -125,8 +113,22 @@
 <td align="left"><img class="emoji" title=":wrench:" alt=":wrench:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/1f527.png" height="20" width="20" align="absmiddle"></td>
 </tr>
 <tr>
+<td align="left">Android Native</td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
 <td align="left">IOS Native</td>
 <td align="left"><img class="emoji" title=":white_check_mark:" alt=":white_check_mark:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/2705.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
+</tr>
+<tr>
+<td align="left">Cordova</td>
+<td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
 <td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
 <td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
 <td align="left"><img class="emoji" title=":x:" alt=":x:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/274c.png" height="20" width="20" align="absmiddle"></td>
@@ -137,8 +139,9 @@
 <p><img class="emoji" title=":warning:" alt=":warning:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/26a0.png" height="20" width="20" align="absmiddle"> Notes:</p>
 
 <ol>
-<li><p>The IOS Native Demo was created for a presentation by <a href="https://twitter.com/clerigo">Edgar Clérigo</a></p></li>
 <li><p>The Case V1 was created in June 2014 following the documentation, but it changed and the Case 2 V2 was created to show the new version. At the end all version will work and for example the Azure Mobile Services will uses a solution similar to the Case 2 V1.</p></li>
+<li><p>The IOS Native Demo was created for a presentation by <a href="https://twitter.com/clerigo">Edgar Clérigo</a></p></li>
+<li><p>For Cordova apps, is possible to read about it in the article <a href="http://msdn.microsoft.com/en-us/magazine/dn879353.aspx">MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure</a> by <a href="http://msdn.microsoft.com/en-us/magazine/dn879353.aspx">Glenn Gailey</a>.</p></li>
 </ol>
 
 <h1>
@@ -299,7 +302,7 @@
 <h1>
 <a id="white_medium_square-contribute" class="anchor" href="#white_medium_square-contribute" aria-hidden="true"><span class="octicon octicon-link"></span></a><img class="emoji" title=":white_medium_square:" alt=":white_medium_square:" src="https://assets-cdn.github.com/images/icons/emoji/unicode/25fb.png" height="20" width="20" align="absmiddle"> Contribute</h1>
 
-<p>Everbody is welcome to contribute, it cloud be interesting to have IOS Native and Android Native support, or even backend using others programming languages.</p>
+<p>Everbody is welcome to contribute, only is required to provide all cases to manage devices in Azure Notification Hubs.</p>
 
 <p>Twitter hashtag : <a href="https://twitter.com/search?q=%23notificationhubs&amp;src=typd">#notificationhubs</a></p>
 
