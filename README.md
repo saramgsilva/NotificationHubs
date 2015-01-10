@@ -1,14 +1,17 @@
 Azure Notification Hubs Sample
 ================
 
-The sample provided has the goal to help developers implement Push Notification in mobile application, more specific in Windows and Xamarin applications.
+The sample provided has the goal to help developers implement Push Notification in mobile applications, more specific in Windows and Xamarin applications. The sample support the two main ways to manage devices in Notification Hubs:
+
+* Case 1 - Devices register directly in Notification Hubs 
+* Case 2 - Devices register in Notification Hubs through backend
 
 
-This demos will not support:
+This demos does not support:
 
-> IOS Native apps or Android Native apps 
+> Android Native apps 
 
-:warning: Any developer that want to contribute to the project can do a pull request with the code for the Case 1 and Case 2.
+:warning: IOS Native is only supported for the Case 1
 
 
 > Cordova apps, but is possible to read about it in the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
@@ -20,7 +23,7 @@ Requirements
 * Create the Notification Hubs at Azure Portal (Azure Mobile Service create it by default)
 * Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification in each Platform
 * Configure the Notification Hubs with the data from Push Notification Services (WNS, GCM, APNs...)
-* Add connectiong string and hub name from Notification Hub
+* Add connectiong string and hub name from Notification Hub (in the sample it is defined in [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs))
 
 
 Sample Status
@@ -132,14 +135,19 @@ Xamarin Android | Google Cloud Service (GCM)
 Xamarin IOS | Apple Push Notification Service (APNs)
 
 
+
 > Development In Xamarin.Android
 
 If you are using simulator and do the deploy for install the app or debug it, you can receive Push Notification while the app run, but if you stop and try to send another Push Notification the simulator will not receive it, you should run again the app without VS to get the push notification
+
+
 
 Build the project
 ================
 
 To develop on this project, just clone the project to your computer, package restore is enable so build the solution first, if you get any errors try to build again and if necessary close the solution and open again to load the references.
+
+
 
 Contributions
 ================
