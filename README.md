@@ -13,10 +13,11 @@ This demos does not support:
 
 > Android Native apps 
 
-:warning: IOS Native is only supported for the Case 1
+> IOS Native Apps ( :warning: IOS Native is only supported for the Case 1)
 
+> Cordova apps
 
-> Cordova apps, but is possible to read about it in the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
+:warning: Is possible to read about it in the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
 
 
 :black_medium_square: Requirements
@@ -62,11 +63,16 @@ The solution have two main cases:
 
 > Solution with folders minimized
 
-![](ScreenShots/FinalSolution-Close.png?raw=true)
+<MTMarkdownOptions output='html4'>
+<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Close.png"> 
+</MTMarkdownOptions>  
+
 
 > Solution with folders expanded
 
-![](ScreenShots/FinalSolution-Open.png?raw=true)
+<MTMarkdownOptions output='html4'>
+<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Open.png"> 
+</MTMarkdownOptions>  
 
 
 :warning: The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs) should be define because it is required to the sample works.
@@ -77,19 +83,29 @@ The solution have two main cases:
 
 The [SceenShots folder](https://github.com/saramgsilva/NotificationHubs/tree/master/ScreenShots) contains image for each platform provided.
 
-![](ScreenShots/Windows Sample - 1 - Registration & Notification.png?raw=true)
+<MTMarkdownOptions output='html4'>
+<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/Windows%20Sample%20-%201%20-%20Registration%20&%20Notification.png"> 
+</MTMarkdownOptions>  
 
 
 :black_medium_square: Resources
 ================
 
-> [Presentation](http://www.saramgsilva.com/index.php/2014/mobile-notification-for-any-device-using-azure-notification-hubs/)
+> Presentation
 
-> [Azure Notification Hubs – All resources you need](http://www.saramgsilva.com/index.php/2014/azure-notification-hubs-all-resources-you-need/)
+<MTMarkdownOptions output='html4'>
+<a href="http://www.saramgsilva.com/index.php/2014/mobile-notification-for-any-device-using-azure-notification-hubs/" target="_blank"><img align="middle" src="http://s20.postimg.org/xt7iab6jh/presentation.png"> </a>
+</MTMarkdownOptions>  
+
+> [Documentation at MSDN] (http://msdn.microsoft.com/en-us/library/jj891130.aspx)
 
 > [Curah! Notification Hubs] (https://curah.microsoft.com/72603/notification-hubs)
 
-> [Documentation at MSDN] (http://msdn.microsoft.com/en-us/library/jj891130.aspx)
+> [Azure Notification Hubs – All resources you need](http://www.saramgsilva.com/index.php/2014/azure-notification-hubs-all-resources-you-need/)
+
+
+
+
 
 
 
