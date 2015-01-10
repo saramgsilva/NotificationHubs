@@ -168,7 +168,7 @@ To develop on this project, just clone the project to your computer, package res
 :white_medium_square: Contribute
 ================
 
-Everbody is welcome to contribute, it cloud be interesting to have IOS Native and Android Native support, or even backend using others programming languages.
+Everbody is welcome to contribute, only is required to provide all cases to manage devices in Azure Notification Hubs.
 
 Twitter hashtag : [#notificationhubs](https://twitter.com/search?q=%23notificationhubs&src=typd)
 
