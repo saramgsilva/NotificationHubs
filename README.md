@@ -138,8 +138,8 @@ Windows Store 8.1 (WinRT) | Windows Push Notification Services (WNS)
 Windows Phone 8.1 (WinRT) | Windows Push Notification Services (WNS)
 Windows Phone 8.1 (SL)| Microsoft Push Notification Service (MPNS)
 Windows Phone 8.0 (SL)| Microsoft Push Notification Service (MPNS)
-Xamarin Android | Google Cloud Service (GCM)
-Xamarin IOS | Apple Push Notification Service (APNs)
+Android | Google Cloud Service (GCM)
+IOS | Apple Push Notification Service (APNs)
 
 
 
