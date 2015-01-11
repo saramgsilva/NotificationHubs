@@ -17,7 +17,7 @@ Azure Notification Hubs Sample
 
 ## :white_medium_square: What is this?
 
-The sample provided has the goal to help developers implement Push Notification in mobile applications, through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) and this sample supports the two main ways to manage devices in Azure Notification Hubs:
+The sample provided has the goal to help developers add Push Notifications to their applications, through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) and this sample supports the two main ways to manage devices in Azure Notification Hubs:
 
 * Case 1 - Devices register directly in Azure Notification Hubs 
 * Case 2 - Devices register in Azure Notification Hubs through backend
