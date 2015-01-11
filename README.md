@@ -3,7 +3,7 @@ Azure Notification Hubs Sample
 
 ## :white_medium_square: What is this?
 
-The sample provided has the goal to help developers implement Push Notification in mobile applications, through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) and this sample supports the two main ways to manage devices in [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/):
+The sample provided has the goal to help developers implement Push Notification in mobile applications, through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) and this sample supports the two main ways to manage devices in Azure Notification Hubs:
 
 * Case 1 - Devices register directly in Azure Notification Hubs 
 * Case 2 - Devices register in Azure Notification Hubs through backend
@@ -12,10 +12,10 @@ The sample provided has the goal to help developers implement Push Notification 
 :white_medium_square: Requirements
 ================
 
-* Create the [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) in Azure Portal (Azure Mobile Service create it by default)
+* Create the Azure Notification Hubs in Azure Portal (Azure Mobile Service create it by default)
 * Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification for each Platform
-* Configure the [Azure Notification Hub](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/), in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
-* Add connectiong string and hub name from the [Azure Notification Hub](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) created (in the sample it is defined in [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs))
+* Configure the Azure Notification Hub, in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
+* Add connectiong string and hub name from the Azure Notification Hub created (in the sample it is defined in [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs))
 
 
 :white_medium_square: Sample Status
