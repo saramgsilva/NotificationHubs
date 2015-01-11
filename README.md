@@ -1,6 +1,20 @@
 Azure Notification Hubs Sample
 ================
 
+## :white_medium_square: Table of contents
+* [What is this?](https://github.com/saramgsilva/NotificationHubs#white_medium_square-what-is-this)
+* [Requirements](https://github.com/saramgsilva/NotificationHubs#white_medium_square-requirements)
+* [Sample Status](https://github.com/saramgsilva/NotificationHubs#white_medium_square-sample-status)
+* [The Solution](https://github.com/saramgsilva/NotificationHubs#white_medium_square-the-solution)
+* [Screenshots](https://github.com/saramgsilva/NotificationHubs#white_medium_square-screenshots)
+* [Resources](https://github.com/saramgsilva/NotificationHubs#white_medium_square-resources)
+* [Common Issues](https://github.com/saramgsilva/NotificationHubs#white_medium_square-common-issues)
+* [Tips](https://github.com/saramgsilva/NotificationHubs#white_medium_square-tips)
+* [Build the project](https://github.com/saramgsilva/NotificationHubs#white_medium_square-build-the-project)
+* [Contributors](https://github.com/saramgsilva/NotificationHubs#white_medium_square-contributors)
+* [Contribute](https://github.com/saramgsilva/NotificationHubs#white_medium_square-contribute)
+* [License](https://github.com/saramgsilva/NotificationHubs#white_medium_square-license)
+
 ## :white_medium_square: What is this?
 
 The sample provided has the goal to help developers implement Push Notification in mobile applications, through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) and this sample supports the two main ways to manage devices in Azure Notification Hubs:
