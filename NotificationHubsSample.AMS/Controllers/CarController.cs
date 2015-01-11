@@ -1,4 +1,5 @@
-﻿using System.Linq;
+﻿using System;
+using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
@@ -82,16 +83,24 @@ namespace NotificationHubsSample.AMS.Controllers
         /// <returns>Task.</returns>
         private async Task SendNotificationAsync(string message)
         {
-            await Services.Push.SendAsync(PushHelper.GetWindowsPushMessageForToastText01(message));
-            await Services.Push.SendAsync(PushHelper.GetGooglePushMessage(message));
-            // await Services.Push.SendAsync(PushHelper.GetApplePushMessage(message));
+            try
+            {
+                await Services.Push.SendAsync(PushHelper.GetWindowsPushMessageForToastText01(message));
+                await Services.Push.SendAsync(PushHelper.GetGooglePushMessage(message));
+                await Services.Push.SendAsync(PushHelper.GetMPNSMessage(message));
+                // await Services.Push.SendAsync(PushHelper.GetApplePushMessage(message));
 
+                const string otherMessage = "A second tag was added in AMS.";
 
-            var otherMessage = "A second tag was added in AMS.";
-
-            await Services.Push.SendAsync(PushHelper.GetWindowsPushMessageForToastText01(otherMessage), NotificationHandler.SomeTag);
-            await Services.Push.SendAsync(PushHelper.GetGooglePushMessage(otherMessage), NotificationHandler.SomeTag);
-            // await Services.Push.SendAsync(PushHelper.GetApplePushMessage(otherMessage), NotificationHandler.SomeTag);
+                await Services.Push.SendAsync(PushHelper.GetWindowsPushMessageForToastText01(otherMessage), NotificationHandler.SomeTag);
+                await Services.Push.SendAsync(PushHelper.GetGooglePushMessage(otherMessage), NotificationHandler.SomeTag);
+                await Services.Push.SendAsync(PushHelper.GetMPNSMessage(otherMessage), NotificationHandler.SomeTag);
+                // await Services.Push.SendAsync(PushHelper.GetApplePushMessage(otherMessage), NotificationHandler.SomeTag);
+            }
+            catch (Exception exception)
+            {
+                Services.Log.Error(exception);
+            }
         }
 
         /// <summary>

@@ -172,6 +172,17 @@ namespace NotificationHubsSample.Controllers
             try
             {
                 // Create notifications for both Windows Store and iOS platforms.
+
+                XNamespace wp = "WPNotification";
+                XDocument doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+                    new XElement(wp + "Notification", new XAttribute(XNamespace.Xmlns + "wp", "WPNotification"),
+                        new XElement(wp + "Toast",
+                            new XElement(wp + "Text1",
+                                 "Notification Hubs Sample"),
+                            new XElement(wp + "Text2", notificationText))));
+
+                var toastMpns = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
+
                 var toast = new XElement("toast",
                               new XElement("visual",
                                   new XElement("binding",
@@ -189,11 +200,14 @@ namespace NotificationHubsSample.Controllers
                                     .ToString(Newtonsoft.Json.Formatting.None);
 
                 // Send a notification to the logged-in user on both platforms.
+               
                 var googleResult = await _notificationHubClient.SendGcmNativeNotificationAsync(payload, tag);
 
                 var windowsResult = await _notificationHubClient.SendWindowsNativeNotificationAsync(toast, tag);
+                
+                var mpsnResult = await _notificationHubClient.SendMpnsNativeNotificationAsync(toastMpns, tag);
 
-                var appleResult = await _notificationHubClient.SendAppleNativeNotificationAsync(alert, tag);
+                //var appleResult = await _notificationHubClient.SendAppleNativeNotificationAsync(alert, tag);
             }
             catch (ArgumentException ex)
             {

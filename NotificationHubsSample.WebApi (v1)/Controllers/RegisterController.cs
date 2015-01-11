@@ -63,6 +63,17 @@ namespace NotificationHubsSample.WebApi.Controllers
                     // We need to handle each platform separately.
                     switch (platform)
                     {
+                        case "mpns":
+                            var mpns = registrationDescription as MpnsRegistrationDescription;
+                            if (mpns != null)
+                            {
+                                if (channelUri != null)
+                                {
+                                    mpns.ChannelUri = new Uri(channelUri);
+                                }
+                                registration = await _hubClient.UpdateRegistrationAsync(mpns);
+                            }
+                            break;
                         case "windows":
                             var winReg = registrationDescription as WindowsRegistrationDescription;
                             if (winReg != null)
@@ -109,6 +120,9 @@ namespace NotificationHubsSample.WebApi.Controllers
                 
                 switch (platform)
                 {
+                    case "mpns":
+                        registration = await _hubClient.CreateMpnsNativeRegistrationAsync(channelUri, new[] { installationId, userName });
+                        break;
                     case "windows":
                         registration = await _hubClient.CreateWindowsNativeRegistrationAsync(channelUri, new[] { installationId, userName });
                         break;
@@ -137,6 +151,16 @@ namespace NotificationHubsSample.WebApi.Controllers
         {
             try
             {
+                XNamespace wp = "WPNotification";
+                XDocument doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+                    new XElement(wp + "Notification", new XAttribute(XNamespace.Xmlns + "wp", "WPNotification"),
+                        new XElement(wp + "Toast",
+                            new XElement(wp + "Text1",
+                                 "Notification Hubs Sample"),
+                            new XElement(wp + "Text2", notificationText))));
+
+                var toastMpns = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
+
                 // Create notifications for both Windows Store and iOS platforms.
                 var toast = new XElement("toast",
                               new XElement("visual",
@@ -155,11 +179,14 @@ namespace NotificationHubsSample.WebApi.Controllers
                                     .ToString(Newtonsoft.Json.Formatting.None);
 
                 // Send a notification to the logged-in user on both platforms.
+       
                 var googleResult = await _hubClient.SendGcmNativeNotificationAsync(payload, tag);
 
                 var windowsResult = await _hubClient.SendWindowsNativeNotificationAsync(toast, tag);
 
-                var appleResult = await _hubClient.SendAppleNativeNotificationAsync(alert, tag);
+                var mpnsResult = await _hubClient.SendMpnsNativeNotificationAsync(toastMpns, tag);
+
+                //var appleResult = await _hubClient.SendAppleNativeNotificationAsync(alert, tag);
             }
             catch (ArgumentException ex)
             {

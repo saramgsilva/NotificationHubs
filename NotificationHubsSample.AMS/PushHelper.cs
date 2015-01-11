@@ -12,6 +12,31 @@ namespace NotificationHubsSample.AMS
     public static class PushHelper
     {
         /// <summary>
+        /// Gets the MPNS message.
+        /// </summary>
+        /// <param name="message">The message.</param>
+        /// <returns>IPushMessage.</returns>
+        public static IPushMessage GetMPNSMessage(string message)
+        {
+            var toast = new Toast
+            {
+                Text1 = "Notification Hubs Sample",
+                Text2 = message
+            };
+            var mpnsPushMessage  = new MpnsPushMessage(toast);
+            XNamespace wp = "WPNotification";
+            XDocument doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+                new XElement(wp + "Notification", new XAttribute(XNamespace.Xmlns + "wp", "WPNotification"),
+                    new XElement(wp + "Toast",
+                        new XElement(wp + "Text1",
+                             "Notification Hubs Sample"),
+                        new XElement(wp + "Text2", message))));
+
+            mpnsPushMessage.XmlPayload = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
+            return mpnsPushMessage;
+        }
+
+        /// <summary>
         /// Gets the windows push message for toast text01.
         /// </summary>
         /// <param name="message">The message.</param>

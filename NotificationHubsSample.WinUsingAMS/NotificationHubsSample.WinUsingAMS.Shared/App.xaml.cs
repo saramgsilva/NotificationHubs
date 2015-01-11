@@ -19,9 +19,8 @@ namespace NotificationHubsSample.WinUsingAMS
     public sealed partial class App : Application
     {
         public static MobileServiceClient NotificationHubsSampleAMSClient = new MobileServiceClient(
-        "https://notificationhubssampleams.azure-mobile.net/",
-        "NhqpslPVprMTalGAdNMGGVhxOCpENh51");
-        
+                Constants.AMSEndpoint, Constants.AMSKey);
+
 #if WINDOWS_PHONE_APP
         private TransitionCollection transitions;
 #endif

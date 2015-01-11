@@ -70,6 +70,17 @@ namespace NotificationHubsSample.WebApi.Controllers
                     // We need to handle each platform separately.
                     switch (platform)
                     {
+                        case "mpns":
+                            var mpns = registrationDescription as MpnsRegistrationDescription;
+                            if (mpns != null)
+                            {
+                                if (channelUri != null)
+                                {
+                                    mpns.ChannelUri = new Uri(channelUri);
+                                }
+                                registration = await _hubClient.UpdateRegistrationAsync(mpns);
+                            }
+                            break;
                         case "windows":
                             var winReg = registrationDescription as WindowsRegistrationDescription;
                             if (winReg != null)
@@ -116,7 +127,20 @@ namespace NotificationHubsSample.WebApi.Controllers
                 string template;
                 switch (platform)
                 {
-                        // in this case when we register the device we define the template for the target
+                    // in this case when we register the device we define the template for the target
+                    case "mpns":
+                     
+                        XNamespace wp = "WPNotification";
+                        XDocument doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+                            new XElement(wp + "Notification", new XAttribute(XNamespace.Xmlns + "wp", "WPNotification"),
+                                new XElement(wp + "Toast",
+                                    new XElement(wp + "Text1",
+                                         "Notification Hubs Sample"),
+                                    new XElement(wp + "Text2", "$(message)"))));
+
+                        template = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
+                        registration = await _hubClient.CreateMpnsTemplateRegistrationAsync(channelUri, template, new[] { installationId, userName });
+                        break;
                     case "windows":
                         template = new XElement("toast",
                            new XElement("visual",

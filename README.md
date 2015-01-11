@@ -3,19 +3,19 @@ Azure Notification Hubs Sample
 
 ## :white_medium_square: What is this?
 
-The sample provided has the goal to help developers implement Push Notification, through Azure Notification Hubs, in mobile applications and this sample supports the two main ways to manage devices in Notification Hubs:
+The sample provided has the goal to help developers implement Push Notification in mobile applications, through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) and this sample supports the two main ways to manage devices in [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/):
 
-* Case 1 - Devices register directly in Notification Hubs 
-* Case 2 - Devices register in Notification Hubs through backend
+* Case 1 - Devices register directly in Azure Notification Hubs 
+* Case 2 - Devices register in Azure Notification Hubs through backend
 
 
 :white_medium_square: Requirements
 ================
 
-* Create the Notification Hubs in Azure Portal (Azure Mobile Service create it by default)
+* Create the [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) in Azure Portal (Azure Mobile Service create it by default)
 * Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification for each Platform
-* Configure the Notification Hub, in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
-* Add connectiong string and hub name from the Notification Hub created (in the sample it is defined in [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs))
+* Configure the [Azure Notification Hub](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/), in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
+* Add connectiong string and hub name from the [Azure Notification Hub](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) created (in the sample it is defined in [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs))
 
 
 :white_medium_square: Sample Status
@@ -27,21 +27,22 @@ The sample provided has the goal to help developers implement Push Notification,
 Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
 :---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
 Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: | :white_check_mark: 
-Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   | :white_check_mark: 
-Windows Phone 8.1 (SL)| :x: | :x: | :x:| :x:
-Windows Phone 8.0 (SL)| :x: | :x:| :x:| :x:
+Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   | :white_check_mark:
+Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark:
 Xamarin Android | :white_check_mark: | :white_check_mark:  | :white_check_mark:   | :white_check_mark: 
 Xamarin IOS | :wrench: | :wrench:| :wrench:| :wrench:
 Android Native |  :x:  | :x:| :x:| :x:
 IOS Native | :white_check_mark:   | :x:| :x:| :x:
-Cordova |  :x: | :x:| :x:| :x:
+
 
 :warning: Notes:
 
 
 1. The Case V1 was created in June 2014 following the documentation, but it changed and the Case 2 V2 was created to show the new version. At the end all version will work and for example the Azure Mobile Services will uses a solution similar to the Case 2 V1.
 
-2. For Cordova apps, see the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
+2.  The Windows Phone 8.0 implementation is similar to Windows Phone 8.1 SL implementation, this way it will not be provided.
+
+3. For Cordova apps, see the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
 
 
 :white_medium_square: The Solution
@@ -49,10 +50,10 @@ Cordova |  :x: | :x:| :x:| :x:
 
 The solution have two main cases:
 
-* Case 1 - Devices register directly in Notification Hubs 
-* Case 2 - Devices register in Notification Hubs through backend
+* Case 1 - Devices register directly in Azure Notification Hubs 
+* Case 2 - Devices register in Azure Notification Hubs through backend
 
-> Solution with folders minimized
+> Solution showing the main folders (Case 1 and Case 2)
 
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Close.png"> 
@@ -62,12 +63,21 @@ The solution have two main cases:
 :warning: The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs) should be define because it is required to the sample works.
 
 
-> Solution with folders expanded
+> Solution showing projects provided for Case 1 - Devices register directly in Azure Notification Hubs 
 
 <MTMarkdownOptions output='html4'>
-<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Open.png"> 
+<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case1.png"> 
 </MTMarkdownOptions>  
 
+> Solution showing main folders for Case 2 - Devices register in Azure Notification Hubs through backends (Version V1 and V2)
+
+<MTMarkdownOptions output='html4'>
+<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case2-closed.png"> 
+
+> Solution showing projects provided for Case 2 - Devices register in Azure Notification Hubs through backends
+
+<MTMarkdownOptions output='html4'>
+<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case2-opened.png"> 
 
 :white_medium_square: Screenshots
 ================
@@ -90,9 +100,9 @@ The [Sceenshots folder](https://github.com/saramgsilva/NotificationHubs/tree/mas
 
 > [MSDN Documentation] (http://msdn.microsoft.com/en-us/library/jj891130.aspx)
 
-> [Curah! Notification Hubs] (https://curah.microsoft.com/72603/notification-hubs)
+> [Curah! Azure Notification Hubs] (https://curah.microsoft.com/72603/notification-hubs)
 
-> [Azure Notification Hubs – All resources you need](http://www.saramgsilva.com/index.php/2014/azure-notification-hubs-all-resources-you-need/)
+> [[Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) – All resources you need](http://www.saramgsilva.com/index.php/2014/azure-notification-hubs-all-resources-you-need/)
 
 
 
@@ -109,11 +119,16 @@ The [Sceenshots folder](https://github.com/saramgsilva/NotificationHubs/tree/mas
 * When developers implement the registration in devices do not use the debug feature to verify if the devices was registered correctly; 
 * Developers implements the Case 1 when they want to implement the Case 2 and mixes the two cases;
 
-> In Windows apps:
+> In Windows (WinRT) apps:
 
 * In manifest should be defined the Toast capable;
 * In manifest should be defined the Internet capability;
 * Associate with store;
+
+> In Windows Phone (SL) apps:
+
+* In manifest should be defined Internet capability, Toast capable and the ID_CAP_PushNotification
+* Should be handled the notification when the app is running
 
 > In Android apps:
 
@@ -158,7 +173,7 @@ To develop on this project, just clone the project to your computer, package res
 ================
 
 <MTMarkdownOptions output='html4'>
-  	<a href="https://twitter.com/saramgsilva"><img src="http://saramgsilva.github.io/NotificationHubs/images/Eu_400x400.png" height="50"/></a>
+     	<a href="https://twitter.com/saramgsilva"><img src="http://saramgsilva.github.io/NotificationHubs/images/Eu_400x400.png" height="50"/></a>
 		<a href="https://twitter.com/paulomorgado"><img src="http://saramgsilva.github.io/NotificationHubs/images/PauloMorgado_320x240_400x400.jpg" height="50"/></a>
 		<a href="https://twitter.com/adpead"><img src="http://saramgsilva.github.io/NotificationHubs/images/gn8frj8ipi0rsntcvcd0_400x400.jpeg"/ height="50"></a>
 		<a href="https://twitter.com/clerigo"><img src="http://saramgsilva.github.io/NotificationHubs/images/EbslN-rW_400x400.jpeg"/ height="50"></a>	</p>
@@ -168,7 +183,7 @@ To develop on this project, just clone the project to your computer, package res
 :white_medium_square: Contribute
 ================
 
-Everbody is welcome to contribute, only is required to provide all cases to manage devices in Azure Notification Hubs.
+Everbody is welcome to contribute, only is required to provide all cases to manage devices in [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/).
 
 Twitter hashtag : [#notificationhubs](https://twitter.com/search?q=%23notificationhubs&src=typd)
 
