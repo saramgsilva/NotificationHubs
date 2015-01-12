@@ -1,6 +1,7 @@
 Azure Notification Hubs Sample
 ================
 
+:warning: The value provide about build status can be wrong, ignore it, for now
 [![Build Status](https://travis-ci.org/saramgsilva/NotificationHubs.svg)](https://travis-ci.org/saramgsilva/NotificationHubs)
 
 ## :white_medium_square: Table of contents
