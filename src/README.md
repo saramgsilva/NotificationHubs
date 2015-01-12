@@ -1,4 +1,14 @@
 # Windows and Xamarin applications - Source Code 
+## :white_medium_square: Table of contents
+* [Introduction](https://github.com/saramgsilva/NotificationHubs/blob/master/src/README.md#Introduction)
+* [Case 1 - Devices register directly in Azure Notification Hubs](https://github.com/saramgsilva/NotificationHubs/blob/master/src/README.md#case-1---devices-register-directly-in-azure-notification-hubs)
+* [Case 2 - Devices register in Azure Notification Hubs through backends](https://github.com/saramgsilva/NotificationHubs/blob/master/src/README.md#case-2---devices-register-in-azure-notification-hubs-through-backends)
+* [Azure Notification Hubs API by platform](https://github.com/saramgsilva/NotificationHubs/blob/master/src/README.md#azure-notification-hubs-api-by-platform)
+* [Push Notification Templates by platform](https://github.com/saramgsilva/NotificationHubs/blob/master/src/README.md#push-notification-templates-by-platform)
+
+
+
+## Introduction
 
 The solution has three main folders:
 
