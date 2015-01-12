@@ -4,7 +4,7 @@
 * [What is this?](https://github.com/saramgsilva/NotificationHubs#white_medium_square-what-is-this)
 * [Requirements](https://github.com/saramgsilva/NotificationHubs#white_medium_square-requirements)
 * [Sample Status](https://github.com/saramgsilva/NotificationHubs#white_medium_square-sample-status)
-* [The source code](https://github.com/saramgsilva/NotificationHubs#white_medium_square-the-source-code)
+* [The Source Code](https://github.com/saramgsilva/NotificationHubs#white_medium_square-the-source-code)
 * [Screenshots](https://github.com/saramgsilva/NotificationHubs#white_medium_square-screenshots)
 * [Resources](https://github.com/saramgsilva/NotificationHubs#white_medium_square-resources)
 * [Common Issues](https://github.com/saramgsilva/NotificationHubs#white_medium_square-common-issues)
@@ -59,7 +59,7 @@ IOS Native | :white_check_mark:   | :wrench:| :wrench:| :wrench:
 
 
 
-## :white_medium_square: The source code
+## :white_medium_square: The Source Code
 
 
 ### Windows and Xamarin applications
