@@ -136,29 +136,29 @@ var payload = new XElement("toast",
 #### Windows Phone 8.1 SL
 
 ```
-  var mpnsPushMessage  = new MpnsPushMessage(toast);
-            XNamespace wp = "WPNotification";
-            XDocument doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
-                new XElement(wp + "Notification", new XAttribute(XNamespace.Xmlns + "wp", "WPNotification"),
-                    new XElement(wp + "Toast",
-                        new XElement(wp + "Text1",
-                             "Notification Hubs Sample"),
-                        new XElement(wp + "Text2", message))));
+var mpnsPushMessage  = new MpnsPushMessage(toast);
+        XNamespace wp = "WPNotification";
+        XDocument doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+            new XElement(wp + "Notification", new XAttribute(XNamespace.Xmlns + "wp", "WPNotification"),
+                new XElement(wp + "Toast",
+                    new XElement(wp + "Text1",
+                         "Notification Hubs Sample"),
+                    new XElement(wp + "Text2", message))));
 
-   var xmlPayload = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
+var xmlPayload = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
 ```
 
 #### IOS
 ```
-                var alert =new JObject(
-                                new JProperty("aps", new JObject(new JProperty("alert", notificationText))),
-                                new JProperty("inAppMessage", notificationText))
-                                .ToString(Newtonsoft.Json.Formatting.None);
+var alert =new JObject(
+                new JProperty("aps", new JObject(new JProperty("alert", notificationText))),
+                new JProperty("inAppMessage", notificationText))
+                .ToString(Newtonsoft.Json.Formatting.None);
 ```
 
 #### Android
 ```
-                var payload = new JObject(
-                                    new JProperty("data", new JObject(new JProperty("message", notificationText))))
-                                    .ToString(Newtonsoft.Json.Formatting.None);
+var payload = new JObject(
+                    new JProperty("data", new JObject(new JProperty("message", notificationText))))
+                    .ToString(Newtonsoft.Json.Formatting.None);
 ```
