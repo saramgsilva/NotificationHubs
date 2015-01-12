@@ -8,7 +8,7 @@
 
 
 
-## Introduction
+## :white_medium_square: Introduction
 
 The solution has three main folders:
 
@@ -34,7 +34,7 @@ The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/mast
 * *AMSKey*  - define the admin key used by the client application when create the object to connect with Azure Mobile Services.
 
 
-### Case 1 - Devices register directly in Azure Notification Hubs 
+## :white_medium_square: Case 1 - Devices register directly in Azure Notification Hubs 
 
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case1.png"> 
@@ -59,7 +59,7 @@ In this case, is provided the client applications that will connect to the Azure
 
 
 
-###  Case 2 - Devices register in Azure Notification Hubs through backends
+## :white_medium_square:  Case 2 - Devices register in Azure Notification Hubs through backends
 
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case2-closed.png"> 
@@ -115,7 +115,7 @@ In this case, is provided the client applications that will connect to the Azure
 > All projects for the Case 2
 
 
-### Azure Notification Hubs API by platform
+## :white_medium_square: Azure Notification Hubs API by platform
 
 Libraries used in the Case 1 are:
 
@@ -130,7 +130,7 @@ Xamarin IOS | ByteSmith.WindowsAzure.Messaging.IOS.dll
 
 
 
-### Push Notification Templates by platform
+## :white_medium_square: Push Notification Templates by platform
 
 #### Windows Phone 8.1 and Windows Store apps (WinRT)
 
