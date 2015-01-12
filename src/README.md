@@ -1,4 +1,4 @@
-# Windows and Xamarin appllications - Souce Code 
+# Windows and Xamarin appllications - Source Code 
 
 The solution has three main folders:
 
