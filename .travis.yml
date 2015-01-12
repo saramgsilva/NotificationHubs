@@ -1,2 +1,2 @@
 language: csharp
-solution: src\NotificationHubSample.sln
+solution: src/NotificationHubSample.sln
