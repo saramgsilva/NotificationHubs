@@ -1,6 +1,8 @@
 Azure Notification Hubs Sample
 ================
 
+[![Build Status](https://travis-ci.org/saramgsilva/NotificationHubs.svg)](https://travis-ci.org/saramgsilva/NotificationHubs)
+
 ## :white_medium_square: Table of contents
 * [What is this?](https://github.com/saramgsilva/NotificationHubs#white_medium_square-what-is-this)
 * [Requirements](https://github.com/saramgsilva/NotificationHubs#white_medium_square-requirements)
