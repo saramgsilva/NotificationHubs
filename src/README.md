@@ -1,4 +1,4 @@
-# Azure Notification Hubs Sample - Source Code
+# Windows and Xamarin appllications - Souce Code 
 
 The solution has three main folders:
 
@@ -29,6 +29,17 @@ The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/mast
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case1.png"> 
 </MTMarkdownOptions>  
+> All projects for the Case 1
+
+
+* Windows 
+   * Windows Phone 8.1 (WinRT)
+   * Windows Store Apps (WinRT)
+   * Windows Phone 8.1 (SL)
+* Xamarin 
+   * Xamarin.Android
+   * Xamarin.IOS
+
 
 In this case, is provided the client applications that will connect to the Azure Notification Hubs, to register the device (the registration will happen each time the application runs).
 
@@ -43,6 +54,8 @@ In this case, is provided the client applications that will connect to the Azure
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case2-closed.png"> 
 </MTMarkdownOptions>  
+
+
 
 >  The "Version from January 2015 (v2)" and "*Version from June 2014 (v1)*" are two different versions from the backend, followed the MSDN Documentation, which the implementation are different but very similar
 
@@ -84,15 +97,17 @@ In this case, is provided the client applications that will connect to the Azure
 > To test the Push Notification, in each client application, is required to do a login (user and pass shoud be equal) and clicking in the button is made a request to register the device in Notification Hubs and a Push Notification is send.      
 
 
-> The following image provide all projects for the Case 2
-
 
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case2-opened.png"> 
 </MTMarkdownOptions>  
 
+> All projects for the Case 2
+
 
 ### Azure Notification Hubs API by platform
+
+Libraries used in the Case 1 are:
 
 Platform | Azure Notification Hubs API 
 :---------- | :------------------------
@@ -101,3 +116,49 @@ Windows Phone 8.1 (WinRT) | [WindowsAzure.Messaging.Managed](https://www.nuget.o
 Windows Phone 8.1 (SL)| [WindowsAzure.Messaging.Managed](https://www.nuget.org/packages/WindowsAzure.Messaging.Managed/)
 Xamarin Android | [ByteSmith.WindowsAzure.Messaging.Android.dll](https://github.com/saramgsilva/NotificationHubs/tree/master/src/NotificationHubsSample.Droid/_external) 
 Xamarin IOS | ByteSmith.WindowsAzure.Messaging.IOS.dll
+
+
+
+
+### Push Notification Templates by platform
+
+#### Windows Phone 8.1 and Windows Store apps (WinRT)
+
+```
+var payload = new XElement("toast",
+                         new XElement("visual",
+                            new XElement("binding",
+                                new XAttribute("template", "ToastText01"),
+                                new XElement("text",
+                                    new XAttribute("id", "1"), message)))).ToString(SaveOptions.DisableFormatting);
+```
+
+#### Windows Phone 8.1 SL
+
+```
+  var mpnsPushMessage  = new MpnsPushMessage(toast);
+            XNamespace wp = "WPNotification";
+            XDocument doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+                new XElement(wp + "Notification", new XAttribute(XNamespace.Xmlns + "wp", "WPNotification"),
+                    new XElement(wp + "Toast",
+                        new XElement(wp + "Text1",
+                             "Notification Hubs Sample"),
+                        new XElement(wp + "Text2", message))));
+
+   var xmlPayload = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
+```
+
+#### IOS
+```
+                var alert =new JObject(
+                                new JProperty("aps", new JObject(new JProperty("alert", notificationText))),
+                                new JProperty("inAppMessage", notificationText))
+                                .ToString(Newtonsoft.Json.Formatting.None);
+```
+
+#### Android
+```
+                var payload = new JObject(
+                                    new JProperty("data", new JObject(new JProperty("message", notificationText))))
+                                    .ToString(Newtonsoft.Json.Formatting.None);
+```
