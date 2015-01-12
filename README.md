@@ -62,7 +62,7 @@ IOS Native | :white_check_mark:   | :wrench:| :wrench:| :wrench:
 ## :white_medium_square: The source code
 
 
-### To Windows and Xamarin applications
+### Windows and Xamarin applications
 
 
 The solution has three main folders:
@@ -88,24 +88,21 @@ The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/mast
 * *AMSKey*  - define the admin key used by the client application when create the object to connect with Azure Mobile Services.
 
 
-> The following image provide all projects for the Case 1
-
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case1.png"> 
 </MTMarkdownOptions>  
-
-
-
-> The following image provide all projects for the Case 2
+> All projects for the Case 1
 
 
 <MTMarkdownOptions output='html4'>
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case2-opened.png"> 
 </MTMarkdownOptions>  
 
+> All projects for the Case 2
 
 
-Read more about the solution in the source code page.
+Read more about the solution in the respective [source code page](https://github.com/saramgsilva/NotificationHubs/tree/master/src).
+
 
 
 
@@ -183,9 +180,6 @@ Windows Phone 8.1 (SL)| Microsoft Push Notification Service (MPNS)
 Windows Phone 8.0 (SL)| Microsoft Push Notification Service (MPNS)
 Android | Google Cloud Service (GCM)
 IOS | Apple Push Notification Service (APNs)
-
-
-
 
 
 
