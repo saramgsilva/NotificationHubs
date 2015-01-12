@@ -7,7 +7,7 @@ The solution has three main folders:
 * Case 2: contain all projects related with the Case 2 - Devices register in Azure Notification Hubs through backend;
 
 <MTMarkdownOptions output='html4'>
-<img align="middle" src=""> 
+<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/IOS.jpg"> 
 </MTMarkdownOptions>  
 
 
