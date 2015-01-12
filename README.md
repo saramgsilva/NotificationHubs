@@ -1,9 +1,6 @@
 Azure Notification Hubs Sample
 ================
 
-:warning: The value provide about build status can be wrong, ignore it, for now
-[![Build Status](https://travis-ci.org/saramgsilva/NotificationHubs.svg)](https://travis-ci.org/saramgsilva/NotificationHubs)
-
 ## :white_medium_square: Table of contents
 * [What is this?](https://github.com/saramgsilva/NotificationHubs#white_medium_square-what-is-this)
 * [Requirements](https://github.com/saramgsilva/NotificationHubs#white_medium_square-requirements)
@@ -48,8 +45,8 @@ Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_c
 Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark:
 Xamarin Android | :white_check_mark: | :white_check_mark:  | :white_check_mark:   | :white_check_mark: 
 Xamarin IOS | :wrench: | :wrench:| :wrench:| :wrench:
-Android Native |  :x:  | :x:| :x:| :x:
-IOS Native | :white_check_mark:   | :x:| :x:| :x:
+Android Native |  :wrench:  | :wrench:| :wrench: | :wrench:
+IOS Native | :white_check_mark:   | :wrench:| :wrench:| :wrench:
 
 
 :warning: Notes:
