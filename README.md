@@ -71,39 +71,12 @@ The solution has three main folders:
 * Case 2 - Devices register in Azure Notification Hubs through backend: contain all projects related with the Case 2
 
 <MTMarkdownOptions output='html4'>
-<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Close.png"> 
+<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Opened.png"> 
 </MTMarkdownOptions>  
 
-
-:warning: *Change required*
-
-The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/src/Shared/Constants.cs) should be defined because it is required to the sample works:
-
-
-* *SenderID* - define the ProjectID used in Xamarin Android and Android projects to request a registrationId from Google Cloud Messaging (GCM)
-* *HubName* - define the Notification Hub's name created in Azure Portal 
-* *ConnectionString* - define the Notification Hub's connection string for the client applications connect with Notification Hub.
-* *BackEndConnectionString* - define the Notification Hub's connection string for the backend connect with Notification Hub.
-* *AMSEndpoint* - define the url from the Azure Mobile Services, used by the client application when create the object to connect with Azure Mobile Services
-* *AMSKey*  - define the admin key used by the client application when create the object to connect with Azure Mobile Services.
-
-
-<MTMarkdownOptions output='html4'>
-<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case1.png"> 
-</MTMarkdownOptions>  
-> All projects for the Case 1
-
-
-<MTMarkdownOptions output='html4'>
-<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Case2-opened.png"> 
-</MTMarkdownOptions>  
-
-> All projects for the Case 2
-
+> All projects for Windows and Xamarin using C#
 
 Read more about the solution in the respective [source code page](https://github.com/saramgsilva/NotificationHubs/tree/master/src).
-
-
 
 
 ## :white_medium_square: Screenshots
