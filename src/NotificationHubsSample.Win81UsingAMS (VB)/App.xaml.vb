@@ -1,4 +1,6 @@
 ﻿' The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkId=234227
+Imports Windows.Networking.PushNotifications
+Imports Microsoft.WindowsAzure.MobileServices
 
 ''' <summary>
 ''' Provides application-specific behavior to supplement the default Application class.
@@ -6,13 +8,15 @@
 NotInheritable Class App
     Inherits Application
 
+    Public Shared NotificationHubsSampleAMSClient As New MobileServiceClient(Constants.AMSEndpoint, Constants.AMSKey)
+
     ''' <summary>
     ''' Invoked when the application is launched normally by the end user.  Other entry points
     ''' will be used when the application is launched to open a specific file, to display
     ''' search results, and so forth.
     ''' </summary>
     ''' <param name="e">Details about the launch request and process.</param>
-    Protected Overrides Sub OnLaunched(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
+    Protected Overrides Async Sub OnLaunched(e As Windows.ApplicationModel.Activation.LaunchActivatedEventArgs)
 #If DEBUG Then
         ' Show graphics profiling information while debugging.
         If System.Diagnostics.Debugger.IsAttached Then
@@ -49,6 +53,9 @@ NotInheritable Class App
 
         ' Ensure the current window is active
         Window.Current.Activate()
+
+        Dim channel = Await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync()
+        Await NotificationHubsSampleAMSClient.GetPush().RegisterNativeAsync(channel.Uri)
     End Sub
 
     ''' <summary>

@@ -130,6 +130,9 @@
     <Compile Include="..\NotificationHubsSample.Win81UsingAMS %28VB%29\Model\Car.vb">
       <Link>Model\Car.vb</Link>
     </Compile>
+    <Compile Include="..\Shared\Constants.vb">
+      <Link>Constants.vb</Link>
+    </Compile>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -138,6 +141,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="NotificationService.vb" />
     <Compile Include="Resources\AppResources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

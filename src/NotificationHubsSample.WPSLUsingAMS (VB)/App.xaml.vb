@@ -1,6 +1,7 @@
 ﻿Imports System.Diagnostics
-Imports System.Resources
 Imports System.Windows.Markup
+Imports Windows.Networking.PushNotifications
+Imports Microsoft.WindowsAzure.MobileServices
 
 Partial Public Class App
     Inherits Application
@@ -10,6 +11,17 @@ Partial Public Class App
     ''' </summary>
     ''' <returns>The root frame of the Phone Application.</returns>
     Public Shared Property RootFrame As PhoneApplicationFrame
+
+    ''' <summary>
+    ''' The notification hubs sample ams client
+    ''' </summary>
+    Public Shared NotificationHubsSampleAMSClient As New MobileServiceClient(Constants.AMSEndpoint, Constants.AMSKey)
+
+    ''' <summary>
+    ''' Gets or sets the notification service.
+    ''' </summary>
+    ''' <value>The notification service.</value>
+    Public Shared Property NotificationService As NotificationService
 
     ''' <summary>
     ''' Constructor for the Application object.
@@ -53,11 +65,20 @@ Partial Public Class App
     ' Code to execute when the application is launching (eg, from Start)
     ' This code will not execute when the application is reactivated
     Private Sub Application_Launching(ByVal sender As Object, ByVal e As LaunchingEventArgs)
+        Try
+            NotificationService = New NotificationService()
+            NotificationService.Request()
+        Catch exception As Exception
+            Debug.WriteLine(exception)
+        End Try
+
     End Sub
 
     ' Code to execute when the application is activated (brought to foreground)
     ' This code will not execute when the application is first launched
-    Private Sub Application_Activated(ByVal sender As Object, ByVal e As ActivatedEventArgs)
+    Private Async Sub Application_Activated(ByVal sender As Object, ByVal e As ActivatedEventArgs)
+        Dim channel = Await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync()
+        Await NotificationHubsSampleAMSClient.GetPush().RegisterNativeAsync(channel.Uri)
     End Sub
 
     ' Code to execute when the application is deactivated (sent to background)

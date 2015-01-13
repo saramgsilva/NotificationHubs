@@ -116,6 +116,9 @@
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\Shared\Constants.vb">
+      <Link>Constants.vb</Link>
+    </Compile>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>

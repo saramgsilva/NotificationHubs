@@ -36,8 +36,6 @@ namespace NotificationHubsSample
                 channel.HttpNotificationReceived += Channel_HttpNotificationReceived;
                 channel.ShellToastNotificationReceived += Channel_ShellToastNotificationReceived;
                 channel.ChannelUriUpdated += Channel_ChannelUriUpdated;
-
-                Debug.WriteLine(channel.ChannelUri.ToString());
             }
         }
 

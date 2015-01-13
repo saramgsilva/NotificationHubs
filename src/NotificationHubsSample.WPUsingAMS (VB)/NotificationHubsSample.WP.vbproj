@@ -92,6 +92,9 @@
     <Compile Include="..\NotificationHubsSample.Win81UsingAMS %28VB%29\Model\Car.vb">
       <Link>Model\Car.vb</Link>
     </Compile>
+    <Compile Include="..\Shared\Constants.vb">
+      <Link>Constants.vb</Link>
+    </Compile>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>

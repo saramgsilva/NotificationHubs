@@ -21,6 +21,10 @@ namespace NotificationHubsSample
         /// <returns>The root frame of the Phone Application.</returns>
         public static PhoneApplicationFrame RootFrame { get; private set; }
 
+        /// <summary>
+        /// Gets or sets the notification service.
+        /// </summary>
+        /// <value>The notification service.</value>
         public static NotificationService NotificationService { get; set; }
 
         /// <summary>

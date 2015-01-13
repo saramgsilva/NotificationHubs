@@ -1,8 +1,4 @@
-﻿Imports System
-Imports System.Threading
-Imports System.Windows.Controls
-Imports Microsoft.Phone.Controls
-Imports Microsoft.Phone.Shell
+﻿Imports Microsoft.Phone.Controls
 
 Partial Public Class MainPage
     Inherits PhoneApplicationPage
@@ -33,7 +29,13 @@ Partial Public Class MainPage
     '    ApplicationBar.MenuItems.Add(appBarMenuItem)
     'End Sub
 
-    Private Sub ButtonBase_OnClick(ByVal sender As Object, ByVal e As RoutedEventArgs)
+    Private Async Sub ButtonBase_OnClick(ByVal sender As Object, ByVal e As RoutedEventArgs)
+        Dim carToInsert = New Car()
+        carToInsert.Name = "Renault 4l"
+        carToInsert.IsElectric = False
 
+        Dim table = App.NotificationHubsSampleAMSClient.GetTable(Of Car)()
+        Await table.InsertAsync(carToInsert)
+        MessageBox.Show("Inserted")
     End Sub
 End Class

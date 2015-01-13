@@ -1,4 +1,6 @@
 ﻿' The Blank Application template is documented at http://go.microsoft.com/fwlink/?LinkID=391641
+Imports Windows.Networking.PushNotifications
+Imports Microsoft.WindowsAzure.MobileServices
 
 ''' <summary>
 ''' Provides application-specific behavior to supplement the default Application class.
@@ -7,6 +9,7 @@ NotInheritable Class App
     Inherits Application
 
     Private _transitions As TransitionCollection
+    Public Shared NotificationHubsSampleAMSClient As New MobileServiceClient(Constants.AMSEndpoint, Constants.AMSKey)
 
     ''' <summary>
     ''' Initializes the singleton application object. This is the first line of authored code
@@ -22,7 +25,7 @@ NotInheritable Class App
     ''' search results, and so forth.
     ''' </summary>
     ''' <param name="e">Details about the launch request and process.</param>
-    Protected Overrides Sub OnLaunched(e As LaunchActivatedEventArgs)
+    Protected Overrides Async Sub OnLaunched(e As LaunchActivatedEventArgs)
 #If DEBUG Then
         If System.Diagnostics.Debugger.IsAttached Then
             DebugSettings.EnableFrameRateCounter = True
@@ -70,6 +73,8 @@ NotInheritable Class App
 
         ' Ensure the current window is active
         Window.Current.Activate()
+        Dim channel = Await PushNotificationChannelManager.CreatePushNotificationChannelForApplicationAsync()
+        Await NotificationHubsSampleAMSClient.GetPush().RegisterNativeAsync(channel.Uri)
     End Sub
 
     ''' <summary>
