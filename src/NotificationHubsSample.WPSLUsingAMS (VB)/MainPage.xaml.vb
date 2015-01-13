@@ -33,4 +33,7 @@ Partial Public Class MainPage
     '    ApplicationBar.MenuItems.Add(appBarMenuItem)
     'End Sub
 
+    Private Sub ButtonBase_OnClick(ByVal sender As Object, ByVal e As RoutedEventArgs)
+
+    End Sub
 End Class

@@ -21,4 +21,7 @@ Public NotInheritable Class MainPage
         ' this event is handled for you.
     End Sub
 
+    Private Sub ButtonBase_OnClick(ByVal sender As Object, ByVal e As RoutedEventArgs)
+
+    End Sub
 End Class

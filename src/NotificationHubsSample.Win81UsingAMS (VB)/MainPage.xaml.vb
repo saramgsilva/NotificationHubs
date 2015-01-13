@@ -6,4 +6,7 @@
 Public NotInheritable Class MainPage
     Inherits Page
 
+    Private Sub ButtonBase_OnClick(ByVal sender As Object, ByVal e As RoutedEventArgs)
+
+    End Sub
 End Class

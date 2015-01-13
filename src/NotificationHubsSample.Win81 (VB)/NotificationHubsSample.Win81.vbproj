@@ -4,7 +4,7 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
-    <ProjectGuid>{8e964296-afe1-48f9-85dd-aacf71c8c5c7}</ProjectGuid>
+    <ProjectGuid>{8E964296-AFE1-48F9-85DD-AACF71C8C5C7}</ProjectGuid>
     <OutputType>AppContainerExe</OutputType>
     <RootNamespace>NotificationHubsSample</RootNamespace>
     <AssemblyName>NotificationHubsSample</AssemblyName>
@@ -13,9 +13,10 @@
     <MinimumVisualStudioVersion>12</MinimumVisualStudioVersion>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{BC8A1FFA-BEE3-4634-8014-F334798102B3};{F184B08F-C81C-45F6-A57F-5ABD9991F28F}</ProjectTypeGuids>
-    
-    <PackageCertificateKeyFile>NotificationHubsSample_TemporaryKey.pfx</PackageCertificateKeyFile>
-    
+    <PackageCertificateKeyFile>NotificationHubsSample.Win81_StoreKey.pfx</PackageCertificateKeyFile>
+    <PackageCertificateThumbprint>4763F38F546FDEDB931B0461E2F7BFF6EEA05892</PackageCertificateThumbprint>
+    <SolutionDir Condition="$(SolutionDir) == '' Or $(SolutionDir) == '*Undefined*'">..\</SolutionDir>
+    <RestorePackages>true</RestorePackages>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
     <PlatformTarget>AnyCPU</PlatformTarget>
@@ -115,30 +116,27 @@
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <ItemGroup>
-    <!-- A reference to the entire .Net Framework and Windows SDK are automatically included -->
-  </ItemGroup>
-  <ItemGroup>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
     <Compile Include="MainPage.xaml.vb">
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
-    <Compile Include="My Project\AssemblyInfo.vb"/>
+    <Compile Include="My Project\AssemblyInfo.vb" />
   </ItemGroup>
   <ItemGroup>
     <AppxManifest Include="Package.appxmanifest">
       <SubType>Designer</SubType>
     </AppxManifest>
-    
+    <None Include="NotificationHubsSample.Win81_StoreKey.pfx" />
     <None Include="NotificationHubsSample_TemporaryKey.pfx" />
-    
+    <None Include="packages.config" />
   </ItemGroup>
   <ItemGroup>
-  <Content Include="Assets\Logo.scale-100.png" />
-  <Content Include="Assets\SmallLogo.scale-100.png" />
-  <Content Include="Assets\SplashScreen.scale-100.png" />
-  <Content Include="Assets\StoreLogo.scale-100.png" />
+    <Content Include="Assets\Logo.scale-100.png" />
+    <Content Include="Assets\SmallLogo.scale-100.png" />
+    <Content Include="Assets\SplashScreen.scale-100.png" />
+    <Content Include="Assets\StoreLogo.scale-100.png" />
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="App.xaml">
@@ -161,7 +159,7 @@
     <Import Include="System.IO" />
     <Import Include="System.Linq" />
     <Import Include="System.Runtime.CompilerServices" />
-    <Import Include="System.Runtime.InteropServices.WindowsRuntime"/>
+    <Import Include="System.Runtime.InteropServices.WindowsRuntime" />
     <Import Include="System.Threading.Tasks" />
     <Import Include="System.Windows.Input" />
     <Import Include="System.Xml.Linq" />
@@ -180,6 +178,11 @@
     <Import Include="Windows.UI.Xaml.Media.Imaging" />
     <Import Include="Windows.UI.Xaml.Navigation" />
   </ItemGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.WindowsAzure.Messaging.Managed">
+      <HintPath>..\packages\WindowsAzure.Messaging.Managed.0.1.7.9\lib\netcore45\Microsoft.WindowsAzure.Messaging.Managed.dll</HintPath>
+    </Reference>
+  </ItemGroup>
   <PropertyGroup Condition=" '$(VisualStudioVersion)' == '' or '$(VisualStudioVersion)' &lt; '12.0' ">
     <VisualStudioVersion>12.0</VisualStudioVersion>
   </PropertyGroup>
@@ -196,6 +199,13 @@
     <OptionInfer>On</OptionInfer>
   </PropertyGroup>
   <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsXaml\v$(VisualStudioVersion)\Microsoft.Windows.UI.Xaml.VisualBasic.targets" />
+  <Import Project="$(SolutionDir)\.nuget\NuGet.targets" Condition="Exists('$(SolutionDir)\.nuget\NuGet.targets')" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Enable NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('$(SolutionDir)\.nuget\NuGet.targets')" Text="$([System.String]::Format('$(ErrorText)', '$(SolutionDir)\.nuget\NuGet.targets'))" />
+  </Target>
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.
   <Target Name="BeforeBuild">

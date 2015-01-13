@@ -1,41 +1,26 @@
 ﻿<?xml version="1.0" encoding="utf-8"?>
 <Package xmlns="http://schemas.microsoft.com/appx/2010/manifest" xmlns:m2="http://schemas.microsoft.com/appx/2013/manifest" xmlns:m3="http://schemas.microsoft.com/appx/2014/manifest" xmlns:mp="http://schemas.microsoft.com/appx/2014/phone/manifest">
-
-  <Identity Name="486ffd16-03cf-4564-81ff-9b019b3c255d"
-            Publisher="CN=NB14696"
-            Version="1.0.0.0" />
-
-  <mp:PhoneIdentity PhoneProductId="486ffd16-03cf-4564-81ff-9b019b3c255d" PhonePublisherId="00000000-0000-0000-0000-000000000000"/>
-
+  <Identity Name="6962SaraSilva.NotifyApp1" Publisher="CN=DCF992AE-36D5-4720-87F0-2969E94BFEC0" Version="1.1.0.0" />
+  <mp:PhoneIdentity PhoneProductId="4b0fdc3a-e914-460f-a7ab-b3170c111145" PhonePublisherId="00000000-0000-0000-0000-000000000000" />
   <Properties>
-    <DisplayName>NotificationHubsSample</DisplayName>
-    <PublisherDisplayName>NB14696</PublisherDisplayName>
+    <DisplayName>NotifyApp1</DisplayName>
+    <PublisherDisplayName>Sara Silva</PublisherDisplayName>
     <Logo>Assets\StoreLogo.png</Logo>
   </Properties>
-
   <Prerequisites>
     <OSMinVersion>6.3.1</OSMinVersion>
     <OSMaxVersionTested>6.3.1</OSMaxVersionTested>
   </Prerequisites>
-  
   <Resources>
-    <Resource Language="x-generate"/>
+    <Resource Language="x-generate" />
   </Resources>
-
   <Applications>
-    <Application Id="App"
-        Executable="$targetnametoken$.exe"
-        EntryPoint="NotificationHubsSample.App">
-        <m3:VisualElements
-            DisplayName="NotificationHubsSample"
-            Square150x150Logo="Assets\Logo.png"
-            Square44x44Logo="Assets\SmallLogo.png"
-            Description="NotificationHubsSample"
-            ForegroundText="light"
-            BackgroundColor="transparent">
-            <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png"/>
-            <m3:SplashScreen Image="Assets\SplashScreen.png"/>
-        </m3:VisualElements>
+    <Application Id="App" Executable="$targetnametoken$.exe" EntryPoint="NotificationHubsSample.App">
+      <m3:VisualElements DisplayName="NotifyApp1" Square150x150Logo="Assets\Logo.png" Square44x44Logo="Assets\SmallLogo.png" Description="NotificationHubsSample" ForegroundText="light" BackgroundColor="transparent" ToastCapable="true">
+        <m3:DefaultTile Wide310x150Logo="Assets\WideLogo.png" Square71x71Logo="Assets\Square71x71Logo.png">
+        </m3:DefaultTile>
+        <m3:SplashScreen Image="Assets\SplashScreen.png" />
+      </m3:VisualElements>
     </Application>
   </Applications>
   <Capabilities>
