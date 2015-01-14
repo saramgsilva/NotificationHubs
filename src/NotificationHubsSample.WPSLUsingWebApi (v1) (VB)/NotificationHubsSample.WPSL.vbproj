@@ -127,6 +127,9 @@
     <Import Include="Microsoft.Phone.Shell" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="..\NotificationHubsSample.Win81UsingWebApi %28v1%29 %28VB%29\SettingsHelper.vb">
+      <Link>SettingsHelper.vb</Link>
+    </Compile>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
@@ -135,6 +138,7 @@
       <DependentUpon>MainPage.xaml</DependentUpon>
     </Compile>
     <Compile Include="My Project\AssemblyInfo.vb" />
+    <Compile Include="NotificationService.vb" />
     <Compile Include="Resources\AppResources.Designer.vb">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>

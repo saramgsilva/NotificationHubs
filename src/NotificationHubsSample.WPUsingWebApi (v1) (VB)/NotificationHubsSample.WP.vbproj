@@ -89,6 +89,9 @@
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\NotificationHubsSample.Win81UsingWebApi %28v1%29 %28VB%29\SettingsHelper.vb">
+      <Link>SettingsHelper.vb</Link>
+    </Compile>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>
