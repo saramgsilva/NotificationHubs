@@ -70,6 +70,7 @@ NotInheritable Class App
 
         ' Ensure the current window is active
         Window.Current.Activate()
+        NotificationService.CreateOrUpdateNotificationsAsync()
     End Sub
 
     ''' <summary>

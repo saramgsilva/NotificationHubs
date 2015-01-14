@@ -89,6 +89,15 @@
     <NoWarn>41999,42016,42017,42018,42019,42020,42021,42022,42032,42036,42314</NoWarn>
   </PropertyGroup>
   <ItemGroup>
+    <Compile Include="..\NotificationHubsSample.Win81 %28VB%29\NotificationService.vb">
+      <Link>NotificationService.vb</Link>
+    </Compile>
+    <Compile Include="..\NotificationHubsSample.Win81 %28VB%29\SettingsHelper.vb">
+      <Link>SettingsHelper.vb</Link>
+    </Compile>
+    <Compile Include="..\Shared\Constants.vb">
+      <Link>Constants.vb</Link>
+    </Compile>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>
     </Compile>

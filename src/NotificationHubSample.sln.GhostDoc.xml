@@ -1,8 +1,4 @@
 <GhostDoc>
-<IgnoreFilePatterns>
-  <IgnoreFilePattern>*.min.js</IgnoreFilePattern>
-  <IgnoreFilePattern>jquery*.js</IgnoreFilePattern>
-</IgnoreFilePatterns>
   <SpellChecker>
     <IncludeExtensions>
     </IncludeExtensions>
