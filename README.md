@@ -95,7 +95,7 @@ The solution has three main folders:
 <img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Opened.png"> 
 </MTMarkdownOptions>  
 
-> All projects for Windows and Xamarin using C#
+> All projects for Windows and Xamarin
 
 Read more about the solution in the respective [source code page](https://github.com/saramgsilva/NotificationHubs/tree/master/src).
 
