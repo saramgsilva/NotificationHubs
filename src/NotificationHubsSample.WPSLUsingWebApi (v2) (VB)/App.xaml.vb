@@ -10,6 +10,16 @@ Partial Public Class App
     ''' </summary>
     ''' <returns>The root frame of the Phone Application.</returns>
     Public Shared Property RootFrame As PhoneApplicationFrame
+    Public Shared Property NotificationService() As NotificationService
+        Get
+            Return _mNotificationService
+        End Get
+        Set(value As NotificationService)
+            _mNotificationService = value
+        End Set
+    End Property
+
+    Private Shared _mNotificationService As NotificationService
 
     ''' <summary>
     ''' Constructor for the Application object.
@@ -53,6 +63,12 @@ Partial Public Class App
     ' Code to execute when the application is launching (eg, from Start)
     ' This code will not execute when the application is reactivated
     Private Sub Application_Launching(ByVal sender As Object, ByVal e As LaunchingEventArgs)
+        Try
+            NotificationService = New NotificationService()
+            NotificationService.Request()
+        Catch exception As Exception
+            Debug.WriteLine(exception.Message)
+        End Try
     End Sub
 
     ' Code to execute when the application is activated (brought to foreground)

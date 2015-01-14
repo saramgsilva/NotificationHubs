@@ -127,8 +127,14 @@
     <Import Include="Microsoft.Phone.Shell" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="..\NotificationHubsSample.Win81UsingWebApi %28v2%29 %28VB%29\Model\DeviceInfo.vb">
-      <Link>Model\DeviceInfo.vb</Link>
+    <Compile Include="..\NotificationHubsSample.Win81UsingWebApi %28v2%29 %28VB%29\DeviceInfo.vb">
+      <Link>DeviceInfo.vb</Link>
+    </Compile>
+    <Compile Include="..\NotificationHubsSample.Win81UsingWebApi %28v2%29 %28VB%29\SettingsHelper.vb">
+      <Link>SettingsHelper.vb</Link>
+    </Compile>
+    <Compile Include="..\NotificationHubsSample.WPSLUsingWebApi %28v1%29 %28VB%29\NotificationService.vb">
+      <Link>NotificationService.vb</Link>
     </Compile>
     <Compile Include="App.xaml.vb">
       <DependentUpon>App.xaml</DependentUpon>

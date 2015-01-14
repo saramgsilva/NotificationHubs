@@ -7,7 +7,70 @@
     xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
     mc:Ignorable="d">
 
-    <Grid Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
-
+    <Grid Background="{StaticResource ApplicationPageBackgroundThemeBrush}">
+        <Grid Margin="{Binding MarginForGrid, Mode=TwoWay}">
+            <Grid.RowDefinitions>
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+                <RowDefinition />
+            </Grid.RowDefinitions>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition MaxWidth="200" />
+                <ColumnDefinition />
+            </Grid.ColumnDefinitions>
+            <TextBlock Grid.Row="0"
+                       Grid.Column="0"
+                       Grid.ColumnSpan="2"
+                       VerticalAlignment="Top"
+                       FontSize="42"
+                       Text="Push To Users with Notification Hubs"
+                       TextWrapping="Wrap" />
+            <TextBlock Grid.Row="1"
+                       Grid.Column="0"
+                       VerticalAlignment="Center"
+                       FontSize="24"
+                       Text="Installation Id:" />
+            <TextBlock Name="InstId"
+                       Grid.Row="1"
+                       Grid.Column="1"
+                       VerticalAlignment="Center"
+                       FontSize="24"
+                       TextWrapping="Wrap" />
+            <TextBlock Grid.Row="2"
+                       Grid.Column="0"
+                       VerticalAlignment="Center"
+                       FontSize="24"
+                       Text="Username:" />
+            <TextBox Name="User"
+                     Grid.Row="2"
+                     Grid.Column="1"
+                     Width="300"
+                     Height="40"
+                     HorizontalAlignment="Left"
+                     VerticalAlignment="Center"
+                     FontSize="24" />
+            <TextBlock Grid.Row="3"
+                       Grid.Column="0"
+                       VerticalAlignment="Center"
+                       FontSize="24"
+                       Text="Password:" />
+            <PasswordBox Name="Password"
+                         Grid.Row="3"
+                         Grid.Column="1"
+                         Width="300"
+                         Height="40"
+                         HorizontalAlignment="Left"
+                         VerticalAlignment="Center"
+                         FontSize="24" />
+            <Button Name="Login"
+                    Grid.Row="4"
+                    Grid.Column="0"
+                    Grid.ColumnSpan="2"
+                    Click="LoginClick"
+                    Content="Login + Register for Push"
+                    FontSize="24" />
+        </Grid>
     </Grid>
 </Page>

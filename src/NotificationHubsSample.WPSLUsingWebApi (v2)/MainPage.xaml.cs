@@ -3,8 +3,6 @@ using System.Collections.Generic;
 using System.Net.Http;
 using System.Text;
 using System.Windows;
-using Windows.Networking.PushNotifications;
-using Windows.UI.Notifications;
 using Newtonsoft.Json;
 
 namespace NotificationHubsSample
