@@ -36,16 +36,37 @@ The sample provided has the goal to help developers add Push Notifications to th
 
 * **Key:** :white_check_mark: = Supported,  :x: = Not Supported, :wrench: = In development 
 
+##### Windows Applications - Using XAML / CSharp
 
 Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
 :---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
 Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: | :white_check_mark: 
 Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   | :white_check_mark:
 Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark:
+
+
+##### Windows Applications - Using XAML / Visual Basic
+
+Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
+:---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
+Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: | :white_check_mark: 
+Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   | :white_check_mark:
+Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark:
+
+##### Xamarin Applications
+
+Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
+:---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
 Xamarin Android | :white_check_mark: | :white_check_mark:  | :white_check_mark:   | :white_check_mark: 
 Xamarin IOS | :wrench: | :wrench:| :wrench:| :wrench:
+
+#### Others
+
+Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
+:---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
 Android Native |  :wrench:  | :wrench:| :wrench: | :wrench:
 IOS Native | :white_check_mark:   | :wrench:| :wrench:| :wrench:
+Cordova |  :x:   |  :x:  |  :x:  |  :x:  
 
 
 :warning: Notes:
@@ -192,4 +213,5 @@ Twitter hashtag : [#notificationhubs](https://twitter.com/search?q=%23notificati
 
 
 MIT License (MIT), read more about it in the [LICENSE file](https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/LICENSE.txt).
+
 

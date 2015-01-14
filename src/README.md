@@ -43,9 +43,14 @@ The [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/mast
 
 
 * Windows 
-   * Windows Phone 8.1 (WinRT)
-   * Windows Store Apps (WinRT)
-   * Windows Phone 8.1 (SL)
+  * CSharp
+     * Windows Phone 8.1 (WinRT)
+     * Windows Store Apps (WinRT)
+     * Windows Phone 8.1 (SL)
+  * Visual Basic
+     * Windows Phone 8.1 (WinRT)
+     * Windows Store Apps (WinRT)
+     * Windows Phone 8.1 (SL)
 * Xamarin 
    * Xamarin.Android
    * Xamarin.IOS
@@ -106,6 +111,12 @@ In this case, is provided the client applications that will connect to the Azure
 
 > To test the Push Notification, in each client application, is required to do a login (user and pass shoud be equal) and clicking in the button is made a request to register the device in Notification Hubs and a Push Notification is send.      
 
+
+:warning: 
+
+1. The details provided are similar to CSharp and Visual Basic, this means the goals are equal for each one and the classes, methods and properties has the same name.
+
+2. Xamarin application do not support Visual Basic, for this reason is available sample for CSharp.
 
 
 <MTMarkdownOptions output='html4'>
