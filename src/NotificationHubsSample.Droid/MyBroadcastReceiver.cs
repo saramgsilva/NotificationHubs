@@ -3,6 +3,7 @@ using System.Diagnostics;
 using System.Text;
 using Android.App;
 using Android.Content;
+using Android.Support.V4.App;
 using Android.Util;
 using ByteSmith.WindowsAzure.Messaging;
 using Gcm.Client;
@@ -169,20 +170,23 @@ namespace NotificationHubsSample
 
             //Create an intent to show ui
             var uiIntent = new Intent(this, typeof(MainActivity));
+            var pendingIntent = PendingIntent.GetActivity(this, 0, uiIntent, 0);
 
-            //Create the notification
-            var notification = new Notification(Android.Resource.Drawable.SymActionEmail, title);
+            //Create the notification using Notification.Builder
+            //Use Android Compatibility Apis
 
-            //Auto cancel will remove the notification once the user touches it
-            notification.Flags = NotificationFlags.AutoCancel;
-
-            //Set the notification info
-            //we use the pending intent, passing our ui intent over which will get called
-            //when the notification is tapped.
-            notification.SetLatestEventInfo(this, title, desc, PendingIntent.GetActivity(this, 0, uiIntent, 0));
+            var notification = new NotificationCompat.Builder(this).SetContentTitle(title)
+                .SetSmallIcon(Android.Resource.Drawable.SymActionEmail)
+                //we use the pending intent, passing our ui intent over which will get called
+                //when the notification is tapped.
+                .SetContentIntent(pendingIntent)
+                .SetContentText(desc)
+                //Auto cancel will remove the notification once the user touches it
+                 .SetAutoCancel(true).
+                Build();
 
             //Show the notification
-            notificationManager.Notify(1, notification);
+            if (notificationManager != null) notificationManager.Notify(1, notification);
         }
     }
 }
