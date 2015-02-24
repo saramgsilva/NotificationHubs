@@ -46,7 +46,7 @@ Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration M
 :---------- | :------------------------ | :------------------------ | :------------------------ | 
 Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: 
 Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   
-Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:rk
+Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:
 
 
 ##### Windows Applications - Using XAML / Visual Basic
@@ -55,7 +55,7 @@ Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration M
 :---------- | :------------------------ | :------------------------ | :------------------------ |
 Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: 
 Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   
-Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:rk
+Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:
 
 ##### Xamarin Applications
 
