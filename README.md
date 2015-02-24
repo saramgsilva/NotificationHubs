@@ -16,10 +16,15 @@
 
 ## :white_medium_square: What is this?
 
-The sample provided has the goal to help developers add Push Notifications to their applications, through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) and this sample supports the two main ways to manage devices in Azure Notification Hubs:
+The sample provided has the goal to help developers add Push Notifications to their applications, 
+through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/) 
+and this sample supports:
 
-* Case 1 - Devices register directly in Azure Notification Hubs 
-* Case 2 - Devices register in Azure Notification Hubs through backend
+* The two main ways to manage devices in Azure Notification Hubs, using the Registration Model:
+	* Case 1 - Devices register directly in Azure Notification Hubs 
+	* Case 2 - Devices register in Azure Notification Hubs through backend
+	
+* Azure Mobile Services;
 
 
 ## :white_medium_square: Requirements
@@ -28,8 +33,7 @@ The sample provided has the goal to help developers add Push Notifications to th
 * Create the Azure Notification Hubs in Azure Portal (Azure Mobile Service create it by default)
 * Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification for each Platform
 * Configure the Azure Notification Hub, in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
-* Add connection string and hub name from the Azure Notification Hub created (in the sample it is defined in [Contants.cs file](https://github.com/saramgsilva/NotificationHubs/blob/master/Shared/Constants.cs))
-
+* Add connection string and hub name from the Azure Notification Hub created (in the sample it is defined in Contants.cs file
 
 ## :white_medium_square: Sample Status
 
@@ -38,76 +42,49 @@ The sample provided has the goal to help developers add Push Notifications to th
 
 ##### Windows Applications - Using XAML / CSharp
 
-Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
-:---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
-Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: | :white_check_mark: 
-Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   | :white_check_mark:
-Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark:
+Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
+:---------- | :------------------------ | :------------------------ | :------------------------ | 
+Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: 
+Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   
+Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:rk
 
 
 ##### Windows Applications - Using XAML / Visual Basic
 
-Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
-:---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
-Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: | :white_check_mark: 
-Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   | :white_check_mark:
-Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:| :white_check_mark:
+Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
+:---------- | :------------------------ | :------------------------ | :------------------------ |
+Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: 
+Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   
+Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:rk
 
 ##### Xamarin Applications
 
-Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
-:---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
-Xamarin Android | :white_check_mark: | :white_check_mark:  | :white_check_mark:   | :white_check_mark: 
-Xamarin IOS | :wrench: | :wrench:| :wrench:| :wrench:
+Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
+:---------- | :------------------------ | :------------------------ | :------------------------ | 
+Xamarin Android | :wrench:| :wrench: | :wrench:   | 
+Xamarin IOS | :wrench: | :wrench:| :wrench:| 
+
 
 #### Others
 
-Platform | Case 1 | Case 2 using WebAPI (V1) | Case 2 using WebAPI (V2) | Case 2 using AMS (V2) 
-:---------- | :------------------------ | :------------------------ | :------------------------ | :------------------------ |
-Android Native |  :wrench:  | :wrench:| :wrench: | :wrench:
-IOS Native | :white_check_mark:   | :wrench:| :wrench:| :wrench:
-Cordova |  :x:   |  :x:  |  :x:  |  :x:  
+Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
+:---------- | :------------------------ | :------------------------ | :------------------------ | 
+Android Native |  :x:  | :white_check_mark:| :x: | 
+IOS Native | :x:  | :x:| :x:| 
+Cordova |  :x:  | :x: | :x: |  
 
 
 :warning: Notes:
 
+1.  The Windows Phone 8.0 implementation is similar to Windows Phone 8.1 SL implementation, this way it will not be provided.
 
-1. The Case V1 was created in June 2014 following the documentation, but it changed and the Case 2 V2 was created to show the new version. At the end all version will work and for example the Azure Mobile Services will uses a solution similar to the Case 2 V1.
-
-2.  The Windows Phone 8.0 implementation is similar to Windows Phone 8.1 SL implementation, this way it will not be provided.
-
-3. For Cordova apps, see the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
+2. For Cordova apps, see the article [MSDN Magazine - Push Notifications to Cordova Apps with Microsoft Azure](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx) by [Glenn Gailey](http://msdn.microsoft.com/en-us/magazine/dn879353.aspx).
 
 
 
 ## :white_medium_square: The Source Code
 
-
-### Windows and Xamarin applications
-
-
-The solution has three main folders:
-* Shared: contain the files shared between projects
-* Case 1 - Devices register directly in Azure Notification Hubs: contain all projects related with the Case 1
-* Case 2 - Devices register in Azure Notification Hubs through backend: contain all projects related with the Case 2
-
-<MTMarkdownOptions output='html4'>
-<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/FinalSolution-Opened.png"> 
-</MTMarkdownOptions>  
-
-> All projects for Windows and Xamarin
-
-Read more about the solution in the respective [source code page](https://github.com/saramgsilva/NotificationHubs/tree/master/src).
-
-
-## :white_medium_square: Screenshots
-
-
-The [Sceenshots folder](https://github.com/saramgsilva/NotificationHubs/tree/master/ScreenShots) contains image for each platform provided.
-
-<MTMarkdownOptions output='html4'>
-<img align="middle" src="https://raw.githubusercontent.com/saramgsilva/NotificationHubs/master/ScreenShots/Windows%20Sample%20-%201%20-%20Registration%20&%20Notification.png"> 
-</MTMarkdownOptions>  
+:warning: Available soon
 
 
 ## :white_medium_square: Resources
@@ -116,15 +93,6 @@ The [Sceenshots folder](https://github.com/saramgsilva/NotificationHubs/tree/mas
 * [MSDN Documentation] (http://msdn.microsoft.com/en-us/library/jj891130.aspx)
 
 * [Curah! Azure Notification Hubs] (https://curah.microsoft.com/72603/notification-hubs)
-
-* [Azure Notification Hubs– All resources you need](http://www.saramgsilva.com/index.php/2014/azure-notification-hubs-all-resources-you-need/) 
-
-* Presentation
-
-<MTMarkdownOptions output='html4'>
-<a href="http://www.saramgsilva.com/index.php/2014/mobile-notification-for-any-device-using-azure-notification-hubs/" target="_blank"><img align="middle" src="http://s20.postimg.org/xt7iab6jh/presentation.png"> </a>
-</MTMarkdownOptions>  
-
 
 
 ## :white_medium_square: Common Issues
@@ -180,7 +148,6 @@ IOS | Apple Push Notification Service (APNs)
 ### Development In Xamarin.Android
 
 If you are using simulator and do the deploy for install the app or debug it, you can receive Push Notification while the app run, but if you stop and try to send another Push Notification the simulator will not receive it, you should run again the app without VS to get the push notification
-
 
 
 ## :white_medium_square: Build the project
