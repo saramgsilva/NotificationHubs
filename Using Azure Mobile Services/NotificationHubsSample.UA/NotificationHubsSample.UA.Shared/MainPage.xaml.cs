@@ -2,6 +2,7 @@
 using Windows.UI.Popups;
 using Windows.UI.Xaml;
 using NotificationHubsSample.WinUsingAMS.Model;
+using NotificationHubsSample.UA;
 
 namespace NotificationHubsSample.WinUsingAMS
 {
