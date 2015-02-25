@@ -61,7 +61,7 @@ Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_m
 
 Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
 :---------- | :------------------------ | :------------------------ | :------------------------ | 
-Xamarin Android | :wrench:| :wrench: | :wrench:   | 
+Xamarin Android | :white_check_mark: | :wrench: | :wrench:   | 
 Xamarin IOS | :wrench: | :wrench:| :wrench:| 
 
 
