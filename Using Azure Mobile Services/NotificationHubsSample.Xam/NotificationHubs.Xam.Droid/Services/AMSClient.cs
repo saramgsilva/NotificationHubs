@@ -1,3 +1,4 @@
+using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
 using NotificationHubsSample.WinUsingAMS.Model;
@@ -18,6 +19,9 @@ namespace NotificationHubs.Xam.Droid.Services
 
         public async Task RegisterNativateAsync(string pnsHandler)
         {
+            // Register for push with Mobile Services
+            var tags = new List<string> { "userId" };
+
             await Client.GetPush().RegisterNativeAsync(pnsHandler);
 
             // To register devices using tags
