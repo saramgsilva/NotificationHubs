@@ -41,10 +41,14 @@
 		<string>Icon-Small-40.png</string>
 		<string>Icon-Small-40@2x.png</string>
 		<string>Icon-Small.png</string>
-	</array>	
+	</array>
 	<key>CFBundleShortVersionString</key>
 	<string>1.0.0</string>
 	<key>UIMainStoryboardFile~ipad</key>
 	<string>LaunchScreen</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>remote-notification</string>
+	</array>
 </dict>
 </plist>
