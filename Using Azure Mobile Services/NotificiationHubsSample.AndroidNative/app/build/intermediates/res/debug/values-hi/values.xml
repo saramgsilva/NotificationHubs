@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/D:/NB20466/Desktop/Sara%20Top%20Secret%20Project/NotificationHubsSample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-hi/values.xml -->
+    <eat-comment/>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"मुखपृष्ठ पर नेविगेट करें"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"ऊपर नेविगेट करें"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"अधिक विकल्प"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"पूर्ण"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"सभी देखें"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"कोई एप्‍लिकेशन चुनें"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"क्‍वेरी साफ़ करें"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"खोज क्वेरी"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"खोजें"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"क्वेरी सबमिट करें"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"ध्वनि खोज"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"इसके द्वारा साझा करें"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"%s के साथ साझा करें"</string>
+    <!-- From: file:/D:/NB20466/Desktop/Sara%20Top%20Secret%20Project/NotificationHubsSample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/3.1.59/res/values-hi/strings.xml -->
+    <eat-comment/>
+    <string msgid="3983201110833868073" name="auth_client_needs_enabling_title">"एप्लिकेशन के लिए Google Play सेवाओं को सक्षम किए जाने की आवश्यकता है."</string>
+    <string msgid="7999585836145154206" name="auth_client_needs_installation_title">"एप्लिकेशन के लिए Google Play सेवाओं के इंस्टॉलेशन की आवश्यकता है."</string>
+    <string msgid="6488605506794595966" name="auth_client_needs_update_title">"एप्लिकेशन के लिए Google Play सेवाओं में अपडेट की आवश्यकता है."</string>
+    <string msgid="3635065018897986478" name="auth_client_play_services_err_notification_msg">"Google Play सेवाएं त्रुटि"</string>
+    <string msgid="6304135633531965756" name="auth_client_requested_by_msg">"<ns1:g id="APP_NAME">%1$s</ns1:g> द्वारा अनुरोधित"</string>
+    <string msgid="2534454398764507874" name="auth_client_using_bad_version_title">"एप्लि. ने Google Play सेवाओं के खराब संस्करण के उपयोग का प्रयास किया."</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Google Play सेवाएं सक्षम करें"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"जब तक आप Google Play सेवाएं सक्षम नहीं करते, तब तक यह एप्लिकेशन कार्य नहीं करेगा."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Google Play सेवाएं सक्षम करें"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Google Play सेवाएं पाएं"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"यह एप्लिकेशन Google Play सेवाओं के बिना नहीं चलेगा, जो आपके फ़ोन में नहीं हैं."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"यह एप्लिकेशन Google Play सेवाओं के बिना नहीं चलेगा, जो आपके टेबलेट में नहीं हैं."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Google Play सेवाएं पाएं"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Google Play सेवाओं के साथ अज्ञात समस्या."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Google Play सेवाएं, जिन पर आपके कुछ एप्लिकेशन निर्भर करते हैं, आपके उपकरण द्वारा समर्थित नहीं हैं. कृपया सहायता के लिए निर्माता से संपर्क करें."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Google Play सेवाएं"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"अपडेट करें"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"जब तक आप Google Play सेवाओं को अपडेट नहीं करते, तब तक यह एप्लिकेशन नहीं चलेगा."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Google Play सेवाएं अपडेट करें"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"साइन इन करें"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Google से साइन इन करें"</string>
+</resources>

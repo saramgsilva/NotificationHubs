@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/D:/NB20466/Desktop/Sara%20Top%20Secret%20Project/NotificationHubsSample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-sw/values.xml -->
+    <eat-comment/>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"Nenda mwanzo"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"%1$s, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"%1$s, %2$s, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"Nenda juu"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"Chaguo zaidi"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"Nimemaliza"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"Angalia zote"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"Chagua programu"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"Futa hoja"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"Hoja ya utafutaji"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"Tafuta"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"Wasilisha hoja"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"Tafuta kwa kutamka"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"Shiriki na:"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"Shiriki na %s"</string>
+    <!-- From: file:/D:/NB20466/Desktop/Sara%20Top%20Secret%20Project/NotificationHubsSample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/3.1.59/res/values-sw/strings.xml -->
+    <eat-comment/>
+    <string msgid="3983201110833868073" name="auth_client_needs_enabling_title">"Programu inahitaji Huduma za Google Play ili kuwashwa."</string>
+    <string msgid="7999585836145154206" name="auth_client_needs_installation_title">"Programu inahitaji usakinishaji wa Huduma za Google Play."</string>
+    <string msgid="6488605506794595966" name="auth_client_needs_update_title">"Programu inahitaji sasisho la Huduma za Google Play."</string>
+    <string msgid="3635065018897986478" name="auth_client_play_services_err_notification_msg">"Hitilafu kwenye Huduma za Google Play"</string>
+    <string msgid="6304135633531965756" name="auth_client_requested_by_msg">"Imeombwa na <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="2534454398764507874" name="auth_client_using_bad_version_title">"Programu ilijaribu kutumia toleo baya la Huduma za Google Play."</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"Wezesha huduma za Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"Programu hii haitafanya kazi mpaka utakapowezesha huduma za Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"Wezesha huduma za Google Play"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"Pata huduma za Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"Programu hii haiwezi kuendeshwa bila huduma za Google Play, ambazo hazipo kwenye simu yako."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"Programu hii haiwezi kuendeshwa bila huduma za Google Play, ambazo hazipo kwenye kompyuta yako ndogo."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"Pata huduma za Google Play"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"Suala lisilojulikana na huduma za Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"Huduma za Google Play, ambazo baadhi ya programu zako zinategemea, si linganifu na kifaa chako. Tafadhali wasiliana na mtengenezaji kwa usaidizi."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"Huduma za Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"Sasisha"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"Programu hii haiwezi kuendeshwa mpaka utakaposasisha huduma za Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"Sasisha huduma za Google Play"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"Ingia"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"Ingia ukitumia Google"</string>
+</resources>

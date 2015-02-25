@@ -69,8 +69,8 @@ Xamarin IOS | :wrench: | :wrench:| :wrench:|
 
 Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
 :---------- | :------------------------ | :------------------------ | :------------------------ | 
-Android Native |  :x:  | :white_check_mark:| :x: | 
-IOS Native | :x:  | :x:| :x:| 
+Android Native | :white_check_mark: | :x:| :x: | 
+IOS Native | :x:  |:white_check_mark:| :x:| 
 Cordova |  :x:  | :x: | :x: |  
 
 

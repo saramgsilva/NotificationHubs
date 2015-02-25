@@ -1,0 +1,47 @@
+apply plugin: 'com.android.application'
+
+android {
+    compileSdkVersion 21
+    buildToolsVersion '21.1.2'
+
+    defaultConfig {
+        applicationId "pt.notificationhubssample"
+        minSdkVersion 17
+        targetSdkVersion 21
+        versionCode 1
+        versionName "1.0"
+    }
+    buildTypes {
+        release {
+            minifyEnabled false
+            proguardFiles getDefaultProguardFile('proguard-android.txt'), 'proguard-rules.pro'
+        }
+    }
+
+    packagingOptions {
+        exclude 'allclasses-frame.html'
+        exclude 'allclasses-noframe.html'
+        exclude 'META-INF/jersey-module-version'
+        exclude 'META-INF/ASL2.0'
+        exclude 'META-INF/LICENSE'
+        exclude 'META-INF/LICENSE.txt'
+        exclude 'META-INF/NOTICE'
+        exclude 'constant-values.html'
+        exclude 'help-doc.html'
+        exclude 'index-files/index-1.html'
+        exclude 'index-files/index-2.html'
+        exclude 'index-files/index-3.html'
+    }
+}
+
+dependencies {
+    compile fileTree(dir: 'libs', include: ['*.jar'])
+    compile 'com.android.support:appcompat-v7:21.0.3'
+    compile files('libs/mobileservices-1.1.5.jar')
+    compile files('libs/notification-hubs-0.3-sources.jar')
+    compile files('libs/notification-hubs-0.3.jar')
+    compile files('libs/notifications-1.0.1-sources.jar')
+    compile files('libs/notifications-1.0.1.jar')
+    compile 'com.google.android.gms:play-services:3.1.+'
+    compile 'com.google.code.gson:gson:2.2.4'
+}

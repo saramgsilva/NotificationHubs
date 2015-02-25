@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2c91c949a45a21cdecf26e03951e46c7beec9ad8">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\classes-beaeeba7ae78408b3e7260f2b01c7c2d655ebf13.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\libs\notification-hubs-0.3-sources.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d252c6ddb97fffe754a3c95375d707cce5f346e8">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\notification-hubs-0.3-sources-4ef540a8ae9c5b852fc903d579ea24a3a827bf65.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\.gradle\caches\modules-2\files-2.1\com.google.code.gson\gson\2.2.4\a60a5e993c98c864010053cb901b7eab25306568\gson-2.2.4.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="a60a5e993c98c864010053cb901b7eab25306568">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\gson-2.2.4-91034bc0c3bdba13ce86554c8345d71feed97cfe.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\libs\notification-hubs-0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="5665f8e79e2d89a83af0f915e5fcc93b9ae6747b">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\notification-hubs-0.3-e573ffa2477b4007e7da2c22c11f3c8a34811753.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\libs\mobileservices-1.1.5.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="12188408c45b88124cb38dd2bedc9b314b5f554b">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\mobileservices-1.1.5-4fe38f0952b618141922ef4cc183273b8ec84dcc.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\libs\notifications-1.0.1-sources.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="da84aad799b73c1d5e2b14a7a4f92c5fd0044c7d">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\notifications-1.0.1-sources-34ef4e0ea91706715b439dc8f828525276833347.jar" />
+    </item>
+    <item
+        jar="C:\Users\nb20466\AppData\Local\Android\android-studio\sdk\extras\android\m2repository\com\android\support\support-annotations\21.0.3\support-annotations-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="4b74cefe1f0c1b819e7260c8627a14674e37fd35">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\support-annotations-21.0.3-fe03b23b5e68993e682993ca74151bf9cdf42866.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\libs\notifications-1.0.1.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="d2498fce7adbdb5ebd37dafc56d8056db60f51fe">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\notifications-1.0.1-ee87970ae8f639f508a62d13c164a7387574bced.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\exploded-aar\com.google.android.gms\play-services\3.1.59\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="2dd7b1a9ea65bb03d9cd16df777eeaf537a1fc81">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\classes-a1b151624e1c285185908b512251399e2da624f1.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\exploded-aar\com.android.support\support-v4\21.0.3\libs\internal_impl-21.0.3.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="01ec05bfbafcc07646ba813000bf2ef11742dd03">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\internal_impl-21.0.3-458e3908cc0dc773a53d9436d9000afef4a14767.jar" />
+    </item>
+    <item
+        jar="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\exploded-aar\com.android.support\appcompat-v7\21.0.3\classes.jar"
+        jumboMode="false"
+        revision="21.1.2"
+        sha1="81d42bf983a8741f4888a6e333e454e4a5e0eeb7">
+        <dex dex="D:\NB20466\Desktop\Sara Top Secret Project\NotificationHubsSample\app\build\intermediates\pre-dexed\debug\classes-bdbabfcbc755b394ba5babb0c0d2fa89da635896.jar" />
+    </item>
+
+</items>

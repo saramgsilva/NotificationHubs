@@ -1,0 +1,11 @@
+<component name="libraryTable">
+  <library name="notifications-1.0.1">
+    <CLASSES>
+      <root url="jar://$PROJECT_DIR$/app/libs/notifications-1.0.1.jar!/" />
+    </CLASSES>
+    <JAVADOC />
+    <SOURCES>
+      <root url="jar://$PROJECT_DIR$/app/libs/notifications-1.0.1-sources.jar!/" />
+    </SOURCES>
+  </library>
+</component>

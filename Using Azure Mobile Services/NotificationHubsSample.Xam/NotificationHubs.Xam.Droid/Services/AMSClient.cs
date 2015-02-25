@@ -28,7 +28,7 @@ namespace NotificationHubs.Xam.Droid.Services
             // var tags = new List<string>();
             // Define the tags before register. Is possible to provide the userId and in backend
             // modify and use the tags based in the usedId (in this case tags should be stored in backend by usedId)
-            //await Client.GetPush().RegisterNativeAsync(registrationID, tags);
+            //await Client.GetPush().RegisterNativeAsync(pnsHandler, tags);
         }
     }
 }
