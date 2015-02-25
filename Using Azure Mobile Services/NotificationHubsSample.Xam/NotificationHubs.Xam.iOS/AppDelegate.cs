@@ -1,5 +1,4 @@
-﻿using System.Collections.Generic;
-using Foundation;
+﻿using Foundation;
 using GalaSoft.MvvmLight.Ioc;
 using NotificationHubs.Xam;
 using NotificationHubs.Xam.Droid.Services;
