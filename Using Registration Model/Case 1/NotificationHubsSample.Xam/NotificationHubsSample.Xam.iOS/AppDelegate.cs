@@ -1,7 +1,6 @@
 ﻿using System.Diagnostics;
 using WindowsAzure.Messaging;
 using Foundation;
-using NotificationHubs.Xam;
 using UIKit;
 
 namespace NotificationHubsSample.Xam.iOS
