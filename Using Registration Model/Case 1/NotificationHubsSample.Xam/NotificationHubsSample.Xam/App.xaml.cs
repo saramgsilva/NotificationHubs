@@ -10,10 +10,7 @@ namespace NotificationHubsSample.Xam
         public App(ISettingsService settingsService, INotificationHubsService notificationHubsService)
         {
             InitializeComponent();
-
-            // The root page of your application
-            MainPage = new MainPage();
-
+            
             SimpleIoc.Default.Register<ISettingsService>(() => settingsService);
             SimpleIoc.Default.Register<INotificationHubsService>(() => notificationHubsService);
 

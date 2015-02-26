@@ -14,14 +14,14 @@ namespace NotificationHubsSample.Xam.Droid
         protected override void OnCreate(Bundle bundle)
         {
             base.OnCreate(bundle);
+            var settingsService = new SettingsService();
+            settingsService.Init(this);
+
+            var notificationHubsService = new NotificationHubsService();
+            notificationHubsService.Init(this);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App(new SettingsService(), new NotificationHubsService()));
-
-            var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
-            settingsService.Init(this);
-            var notificationHubsService = ServiceLocator.Current.GetInstance<INotificationHubsService>();
-            notificationHubsService.Init(this);
+            LoadApplication(new App(settingsService, notificationHubsService));
             notificationHubsService.RegisterOrUpdate();
         }
     }

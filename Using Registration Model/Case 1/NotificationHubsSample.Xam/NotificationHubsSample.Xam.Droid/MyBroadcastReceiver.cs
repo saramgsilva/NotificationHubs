@@ -92,7 +92,7 @@ namespace NotificationHubsSample.Xam.Droid
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             try
             {
-                var hubRegistration =  Hub.Register(registrationId, settingsService.Tags.ToArray());
+                var hubRegistration = Hub.Register(registrationId, settingsService.Tags.ToArray());
               
             }
             catch (Exception ex)

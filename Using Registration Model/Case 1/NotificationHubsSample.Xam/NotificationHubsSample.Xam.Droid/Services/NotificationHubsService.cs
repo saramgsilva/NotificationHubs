@@ -7,6 +7,7 @@ namespace NotificationHubsSample.Xam.Droid.Services
     public class NotificationHubsService : INotificationHubsService
     {
         private Context _context;
+        public string PnsHandler { get; set; }
 
         public void Init(object context)
         {

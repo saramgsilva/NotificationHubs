@@ -24,11 +24,11 @@ namespace NotificationHubsSample.Xam.Droid.Services
         {
             get
             {
-                //if (_sharedPreferences.Contains(TagsKey))
-                //{
-                //    var tagsValue = _sharedPreferences.GetString(TagsKey, string.Empty);
-                //    return tagsValue.Split(',').ToList();
-                //}
+                if (_sharedPreferences.Contains(TagsKey))
+                {
+                    var tagsValue = _sharedPreferences.GetString(TagsKey, string.Empty);
+                    return tagsValue.Split(',').ToList();
+                }
                 return new List<string>();
             }
             set

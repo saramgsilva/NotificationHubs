@@ -24,22 +24,38 @@ namespace NotificationHubsSample.Xam
                 FontSize = Device.GetNamedSize(NamedSize.Medium, typeof(Label)),
                 XAlign = TextAlignment.Center
             };
-           // _settingService = ServiceLocator.Current.GetInstance<ISettingsService>();
-           // _tags = _settingService.Tags;
-            _tags = new List<string>();
-            var sportsLabel = new Label { Text = "Sports" };
-            _sportsSwitch = new Switch { IsToggled = _tags.Contains("sports") };
+           _settingService = ServiceLocator.Current.GetInstance<ISettingsService>();
+            _tags = _settingService.Tags;
 
-            var newsLabel = new Label { Text = "News" };
-            _newsSwitch = new Switch { IsToggled = _tags.Contains("news") };
+            var sportsLabel = new Label
+            {
+                Text = "Sports"
+            };
+            _sportsSwitch = new Switch
+            {
+                IsToggled = _tags.Contains("sports")
+            };
 
-            var musicLabel = new Label { Text = "Music" };
-            _musicSwitch = new Switch { IsToggled = _tags.Contains("music") };
-
+            var newsLabel = new Label
+            {
+                Text = "News"
+            };
+            _newsSwitch = new Switch
+            {
+                IsToggled = _tags.Contains("news")
+            };
+            var musicLabel = new Label
+            {
+                Text = "Music"
+            };
+            _musicSwitch = new Switch
+            {
+                IsToggled = _tags.Contains("music")
+            };
             var button = new Button { Text = _tags.Count == 0 ? "Register" : "Update" };
             button.Clicked += ButtonClicked;
             var stackPanel = new StackLayout();
-
+           
             stackPanel.Children.Add(label);
             stackPanel.Children.Add(sportsLabel);
             stackPanel.Children.Add(_sportsSwitch);

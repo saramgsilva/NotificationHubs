@@ -96,6 +96,8 @@
     </Compile>
     <Compile Include="Main.cs" />
     <Compile Include="AppDelegate.cs" />
+    <Compile Include="Services\NotificationHubsService.cs" />
+    <Compile Include="Services\SettingsHelper.cs" />
     <None Include="Entitlements.plist" />
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
@@ -130,6 +132,12 @@
     <Reference Include="Microsoft.WindowsAzure.Messaging.iOS">
       <HintPath>..\..\Components\azure-messaging-1.1.5.3\lib\ios-unified\Microsoft.WindowsAzure.Messaging.iOS.dll</HintPath>
     </Reference>
+    <Reference Include="Refractored.Xam.Settings">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.1.5.0\lib\Xamarin.iOS10\Refractored.Xam.Settings.dll</HintPath>
+    </Reference>
+    <Reference Include="Refractored.Xam.Settings.Abstractions">
+      <HintPath>..\..\packages\Xam.Plugins.Settings.1.5.0\lib\Xamarin.iOS10\Refractored.Xam.Settings.Abstractions.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Xml" />
     <Reference Include="System.Core" />
@@ -150,6 +158,9 @@
       <Visible>False</Visible>
       <Version>1.1.5.3</Version>
     </XamarinComponentReference>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="Properties\_SettingsStarted.txt" />
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />
   <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
