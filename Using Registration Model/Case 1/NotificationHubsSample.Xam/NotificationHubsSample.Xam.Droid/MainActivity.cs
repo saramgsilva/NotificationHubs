@@ -1,15 +1,14 @@
-﻿using System;
-
-using Android.App;
+﻿using Android.App;
 using Android.Content.PM;
-using Android.Runtime;
-using Android.Views;
-using Android.Widget;
 using Android.OS;
+using GalaSoft.MvvmLight.Ioc;
+using Microsoft.Practices.ServiceLocation;
+using NotificationHubsSample.Xam.Droid.Services;
+using NotificationHubsSample.Xam.Services;
 
 namespace NotificationHubsSample.Xam.Droid
 {
-    [Activity(Label = "NotificationHubsSample.Xam", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Notification Hubs Sample ", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -18,6 +17,16 @@ namespace NotificationHubsSample.Xam.Droid
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
             LoadApplication(new App());
+
+
+            SimpleIoc.Default.Register<ISettingsService, SettingsService>();
+            SimpleIoc.Default.Register<INotificationHubsService, NotificationHubsService>();
+
+            var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+            settingsService.Init(this);
+            var notificationHubsService = ServiceLocator.Current.GetInstance<INotificationHubsService>();
+            notificationHubsService.Init(this);
+            notificationHubsService.RegisterOrUpdate();
         }
     }
 }

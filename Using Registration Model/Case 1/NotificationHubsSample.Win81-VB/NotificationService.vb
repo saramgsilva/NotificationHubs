@@ -14,13 +14,7 @@ Public Class NotificationService
             AddHandler pushNotificationChannel.PushNotificationReceived, AddressOf PushNotificationChannelPushNotificationReceived
 
             Dim hub = New NotificationHub(Constants.HubName, Constants.ConnectionString)
-
-            ' unregister
-            If Not String.IsNullOrEmpty(SettingsHelper.ChannelUri) Then
-                Await hub.UnregisterAllAsync(SettingsHelper.ChannelUri)
-                SettingsHelper.RemoveAll()
-            End If
-
+            
             ' register the channel in NH without tags
             'Dim result = Await hub.RegisterNativeAsync(pushNotificationChannel.Uri)
 
@@ -28,13 +22,7 @@ Public Class NotificationService
 
             If result.RegistrationId IsNot Nothing Then
                 Await ShowRegistrationIdAsync(result)
-
-                ' save data
-                SettingsHelper.ChannelUri = result.ChannelUri
-                SettingsHelper.RegistrationId = result.RegistrationId
             End If
-            'todo handle the exception
-            ' _logManager.Log(ex);
         Catch ex As Exception
         End Try
     End Sub

@@ -1,6 +1,7 @@
 using System.Collections.Generic;
 using System.Threading.Tasks;
 using Microsoft.WindowsAzure.MobileServices;
+using NotificationHubs.Xam.Services;
 using NotificationHubsSample.WinUsingAMS.Model;
 using NotificationHubsSample;
 

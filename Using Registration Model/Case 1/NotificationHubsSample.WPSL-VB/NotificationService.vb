@@ -40,13 +40,7 @@ Public Class NotificationService
     Private Async Sub Channel_ChannelUriUpdated(sender As Object, e As NotificationChannelUriEventArgs)
         Try
             Dim hub = New NotificationHub(Constants.HubName, Constants.ConnectionString)
-
-            ' unregister
-            If Not String.IsNullOrEmpty(SettingsHelper.ChannelUri) Then
-                Await hub.UnregisterAllAsync(SettingsHelper.ChannelUri)
-                SettingsHelper.RemoveAll()
-            End If
-
+            
             Debug.WriteLine(e.ChannelUri.ToString())
 
             ' register the channel in NH without tags
@@ -60,10 +54,6 @@ Public Class NotificationService
                                                               MessageBox.Show(result.RegistrationId)
 
                                                           End Function)
-
-                ' save data
-                SettingsHelper.ChannelUri = result.ChannelUri
-                SettingsHelper.RegistrationId = result.RegistrationId
             End If
         Catch exception As Exception
             MessageBox.Show(exception.Message)

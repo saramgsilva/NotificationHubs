@@ -8,10 +8,10 @@
     <Grid>
         <TextBlock HorizontalAlignment="Center"
                    FontSize="42"
-                   Visibility="Visible">
+                   Visibility="Collapsed">
             Register
         </TextBlock>
-        <Grid Visibility="Collapsed">
+        <Grid Visibility="Visible">
             <Grid.RowDefinitions>
                 <RowDefinition Height="Auto" />
                 <RowDefinition Height="50" />

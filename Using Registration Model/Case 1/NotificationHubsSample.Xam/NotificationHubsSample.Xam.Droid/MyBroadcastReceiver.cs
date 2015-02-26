@@ -1,12 +1,14 @@
+using System;
+using System.Diagnostics;
 using System.Text;
+using WindowsAzure.Messaging;
 using Android.App;
 using Android.Content;
 using Android.Support.V4.App;
 using Android.Util;
-using Gcm.Client;
+using Gcm;
 using Microsoft.Practices.ServiceLocation;
-using NotificationHubs.Xam.Services;
-using Constants = NotificationHubsSample.Constants;
+using NotificationHubsSample.Xam.Services;
 
 [assembly: Permission(Name = "@PACKAGE_NAME@.permission.C2D_MESSAGE")]
 [assembly: UsesPermission(Name = "@PACKAGE_NAME@.permission.C2D_MESSAGE")]
@@ -17,10 +19,10 @@ using Constants = NotificationHubsSample.Constants;
 [assembly: UsesPermission(Name = "android.permission.INTERNET")]
 [assembly: UsesPermission(Name = "android.permission.WAKE_LOCK")]
 
-namespace NotificationHubs.Xam.Droid
+namespace NotificationHubsSample.Xam.Droid
 {
     /// <summary>
-    /// Define the MyBroadcastReceiver class.
+    /// Define the MyBroadcastReceiver.
     /// </summary>
     [BroadcastReceiver(Permission = Gcm.Client.Constants.PERMISSION_GCM_INTENTS)]
     [IntentFilter(new string[] { Gcm.Client.Constants.INTENT_FROM_GCM_MESSAGE }, Categories = new string[] { "@PACKAGE_NAME@" })]
@@ -29,9 +31,9 @@ namespace NotificationHubs.Xam.Droid
     public class MyBroadcastReceiver : GcmBroadcastReceiverBase<GcmService>
     {
         /// <summary>
-        /// The senders.
+        /// The senderids.
         /// </summary>
-        public static string[] SenderIds = { Constants.SenderID };
+        public static string[] Senderids = { Constants.SenderID };
 
         /// <summary>
         /// The tag.
@@ -52,12 +54,17 @@ namespace NotificationHubs.Xam.Droid
         public static string RegistrationId { get; private set; }
 
         /// <summary>
+        /// Gets or sets the hub.
+        /// </summary>
+        /// <value>The hub.</value>
+        private NotificationHub Hub { get; set; }
+
+        /// <summary>
         /// Initializes a new instance of the <see cref="GcmService"/> class.
         /// </summary>
         public GcmService()
             : base(Constants.SenderID)
         {
-            Log.Info(MyBroadcastReceiver.Tag, "GcmService() constructor");
         }
 
         /// <summary>
@@ -75,13 +82,24 @@ namespace NotificationHubs.Xam.Droid
         /// </summary>
         /// <param name="context">The context.</param>
         /// <param name="registrationId">The registration identifier.</param>
-        protected async override void OnRegistered(Context context, string registrationId)
+        protected override async void OnRegistered(Context context, string registrationId)
         {
-            Log.Verbose(MyBroadcastReceiver.Tag, "GCM Registered: " + registrationId);
             RegistrationId = registrationId;
-            var amsClient = ServiceLocator.Current.GetInstance<IAMSClient>();
-            await amsClient.RegisterNativateAsync(RegistrationId);
+           
             CreateNotification("GcmService-GCM Registered", "The device has been registered in GCM!");
+
+            Hub = new NotificationHub(Constants.HubName, Constants.ConnectionString, context);
+            var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
+            try
+            {
+                var hubRegistration =  Hub.Register(registrationId, settingsService.Tags.ToArray());
+              
+            }
+            catch (Exception ex)
+            {
+                Debug.WriteLine(ex.InnerException.Message);
+                Debug.WriteLine(ex.Message);
+            }
         }
 
         /// <summary>
@@ -93,7 +111,8 @@ namespace NotificationHubs.Xam.Droid
         {
             Log.Info(MyBroadcastReceiver.Tag, "GcmService() OnUnRegistered");
         }
-        
+
+
         /// <summary>
         /// Called when [message].
         /// </summary>
@@ -101,8 +120,6 @@ namespace NotificationHubs.Xam.Droid
         /// <param name="intent">The intent.</param>
         protected override void OnMessage(Context context, Intent intent)
         {
-            Log.Info(MyBroadcastReceiver.Tag, "GCM Message Received!");
-
             var msg = new StringBuilder();
 
             if (intent != null && intent.Extras != null)
@@ -114,13 +131,7 @@ namespace NotificationHubs.Xam.Droid
             }
             if (intent != null && intent.Extras != null)
             {
-                string messageText = intent.Extras.GetString("msg");
-                if (!string.IsNullOrEmpty(messageText))
-                {
-                    CreateNotification("Message: ", messageText);
-                    return;
-                }
-                messageText = intent.Extras.GetString("message");
+                var messageText = intent.Extras.GetString("message");
                 if (!string.IsNullOrEmpty(messageText))
                 {
                     CreateNotification("Message: ", messageText);

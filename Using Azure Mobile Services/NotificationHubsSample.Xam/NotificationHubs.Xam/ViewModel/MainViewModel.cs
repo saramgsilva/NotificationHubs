@@ -2,6 +2,7 @@
 using GalaSoft.MvvmLight.Command;
 using GalaSoft.MvvmLight.Views;
 using Microsoft.Practices.ServiceLocation;
+using NotificationHubs.Xam.Services;
 using NotificationHubsSample.WinUsingAMS.Model;
 
 namespace NotificationHubs.Xam.ViewModel

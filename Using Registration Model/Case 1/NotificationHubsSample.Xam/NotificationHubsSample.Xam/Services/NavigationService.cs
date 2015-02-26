@@ -5,7 +5,7 @@ using System.Reflection;
 using GalaSoft.MvvmLight.Views;
 using Xamarin.Forms;
 
-namespace NotificationHubs.Xam.Services
+namespace NotificationHubsSample.Xam.Services
 {
     public class NavigationService : INavigationService
     {

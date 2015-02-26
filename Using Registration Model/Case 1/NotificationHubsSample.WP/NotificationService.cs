@@ -21,27 +21,13 @@ namespace NotificationHubsSample
                 pushNotificationChannel.PushNotificationReceived += PushNotificationChannelPushNotificationReceived;
 
                 var hub = new NotificationHub(Constants.HubName, Constants.ConnectionString);
-
-                // unregister
-                if (!string.IsNullOrEmpty(SettingsHelper.ChannelUri))
-                {
-                    await hub.UnregisterAllAsync(SettingsHelper.ChannelUri);
-                    SettingsHelper.RemoveAll();
-                }
-
+                
                 // register the channel in NH
-                var result = await hub.RegisterNativeAsync(pushNotificationChannel.Uri);
-
-                #region 
-                 //var result = await hub.RegisterNativeAsync(pushNotificationChannel.Uri, SettingsHelper.Tags);
-                #endregion
+                
+                var result = await hub.RegisterNativeAsync(pushNotificationChannel.Uri, SettingsHelper.Tags);
                 if (result.RegistrationId != null)
                 {
                     await ShowRegistrationIdAsync(result);
-
-                    // save data
-                    SettingsHelper.ChannelUri = result.ChannelUri;
-                    SettingsHelper.RegistrationId = result.RegistrationId;
                 }
             }
             catch (Exception ex)

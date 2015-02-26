@@ -1,7 +1,7 @@
 ﻿using System.Threading.Tasks;
 using NotificationHubsSample.WinUsingAMS.Model;
 
-namespace NotificationHubs.Xam
+namespace NotificationHubs.Xam.Services
 {
     public interface IAMSClient
     {

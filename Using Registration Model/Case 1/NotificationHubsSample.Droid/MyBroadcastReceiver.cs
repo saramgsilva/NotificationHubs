@@ -49,7 +49,7 @@ namespace NotificationHubsSample
         /// Gets the registration identifier.
         /// </summary>
         /// <value>The registration identifier.</value>
-        public static string RegistrationID { get; private set; }
+        public static string RegistrationId { get; private set; }
 
         /// <summary>
         /// Gets or sets the hub.
@@ -82,34 +82,15 @@ namespace NotificationHubsSample
         /// <param name="registrationId">The registration identifier.</param>
         protected override async void OnRegistered(Context context, string registrationId)
         {
-            RegistrationID = registrationId;
+            RegistrationId = registrationId;
            
             CreateNotification("GcmService-GCM Registered", "The device has been registered in GCM!");
-
-            Hub = new NotificationHub(Constants.HubName, Constants.ConnectionString);
-           
-            if (!string.IsNullOrEmpty(SettingsHelper.RegistrationId))
-            {
-                try
-                {
-                    await Hub.UnregisterAllAsync(registrationId);
-                }
-                catch (Exception ex)
-                {
-                    Debug.WriteLine(ex.Message);
-                    Debugger.Break();
-                }
-            }
-
+            
             try
             {
-                var hubRegistration = await Hub.RegisterNativeAsync(registrationId);
-
-                #region to use tags
-                // var hubRegistration = await Hub.RegisterNativeAsync(registrationId, SettingsHelper.Tags);
-                #endregion
-
-                SettingsHelper.RegistrationId = registrationId;
+               Hub = new NotificationHub(Constants.HubName, Constants.ConnectionString);
+               var hubRegistration = await Hub.RegisterNativeAsync(registrationId, SettingsHelper.Tags);
+               CreateNotification("Notification Hubs Sample", hubRegistration.ToString());
             }
             catch (Exception ex)
             {

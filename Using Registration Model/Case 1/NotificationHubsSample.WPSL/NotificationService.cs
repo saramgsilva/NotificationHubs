@@ -52,18 +52,10 @@ namespace NotificationHubsSample
                 {
                     var hub = new NotificationHub(Constants.HubName, Constants.ConnectionString);
 
-                    // unregister
-                    if (!string.IsNullOrEmpty(SettingsHelper.ChannelUri))
-                    {
-                        await hub.UnregisterAllAsync(SettingsHelper.ChannelUri);
-                        SettingsHelper.RemoveAll();
-                    }
-
                     Debug.WriteLine(e.ChannelUri.ToString());
 
                     // register the channel in NH without tags
                     //var result = await hub.RegisterNativeAsync(e.ChannelUri.ToString());
-                    
                     var result = await hub.RegisterNativeAsync(e.ChannelUri.ToString(), SettingsHelper.Tags);
 
 
@@ -73,10 +65,6 @@ namespace NotificationHubsSample
                         {
                             MessageBox.Show(result.RegistrationId);
                         });
-
-                        // save data
-                        SettingsHelper.ChannelUri = result.ChannelUri;
-                        SettingsHelper.RegistrationId = result.RegistrationId;
                     }
                 }
                 catch (Exception exception)

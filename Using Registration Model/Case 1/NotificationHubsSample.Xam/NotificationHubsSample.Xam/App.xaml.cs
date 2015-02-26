@@ -1,9 +1,9 @@
 ﻿using GalaSoft.MvvmLight.Ioc;
 using GalaSoft.MvvmLight.Views;
-using NotificationHubs.Xam.Services;
+using NotificationHubsSample.Xam.Services;
 using Xamarin.Forms;
 
-namespace NotificationHubs.Xam
+namespace NotificationHubsSample.Xam
 {
     public partial class App : Application
     {

@@ -6,11 +6,12 @@ using Android.OS;
 using GalaSoft.MvvmLight.Ioc;
 using Gcm.Client;
 using NotificationHubs.Xam.Droid.Services;
+using NotificationHubs.Xam.Services;
 using Constants = NotificationHubsSample.Constants;
 
 namespace NotificationHubs.Xam.Droid
 {
-    [Activity(Label = "NotificationHubs.Xam", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
+    [Activity(Label = "Notification Hubs Sample", Icon = "@drawable/icon", MainLauncher = true, ConfigurationChanges = ConfigChanges.ScreenSize | ConfigChanges.Orientation)]
     public class MainActivity : global::Xamarin.Forms.Platform.Android.FormsApplicationActivity
     {
         protected override void OnCreate(Bundle bundle)
@@ -21,7 +22,7 @@ namespace NotificationHubs.Xam.Droid
             SimpleIoc.Default.Register<IAMSClient, AMSClient>();
             try
             {
-                RegisterWithGCM();
+                RegisterWithGcm();
             }
             catch (Exception e)
             {
@@ -33,7 +34,7 @@ namespace NotificationHubs.Xam.Droid
         /// <summary>
         /// Registers the with GCM.
         /// </summary>
-        public void RegisterWithGCM()
+        public void RegisterWithGcm()
         {
             // Check to ensure everything's setup right
             GcmClient.CheckDevice(this);

@@ -2,8 +2,8 @@
 using GalaSoft.MvvmLight.Ioc;
 using NotificationHubs.Xam;
 using NotificationHubs.Xam.Droid.Services;
-using System.Diagnostics;
 using Microsoft.Practices.ServiceLocation;
+using NotificationHubs.Xam.Services;
 using UIKit;
 
 namespace NotificationHubsSample.Xam.iOS
@@ -24,16 +24,22 @@ namespace NotificationHubsSample.Xam.iOS
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        { 
-            // registers for push for iOS8
-            var settings = UIUserNotificationSettings.GetSettingsForTypes(
-                UIUserNotificationType.Alert
-                | UIUserNotificationType.Badge
-                | UIUserNotificationType.Sound,
-                new NSSet());
-
-            UIApplication.SharedApplication.RegisterUserNotificationSettings(settings);
-            UIApplication.SharedApplication.RegisterForRemoteNotifications();
+        {
+            if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
+            {
+                UIApplication.SharedApplication.RegisterUserNotificationSettings(
+                    UIUserNotificationSettings.GetSettingsForTypes(
+                                           UIUserNotificationType.Alert
+                                           | UIUserNotificationType.Badge
+                                           | UIUserNotificationType.Sound, null));
+                UIApplication.SharedApplication.RegisterForRemoteNotifications();
+            }
+            else
+            {
+                UIApplication.SharedApplication.RegisterForRemoteNotificationTypes(UIRemoteNotificationType.Alert
+                                                                         | UIRemoteNotificationType.Badge
+                                                                         | UIRemoteNotificationType.Sound);
+            }
 
             global::Xamarin.Forms.Forms.Init();
             LoadApplication(new App());
@@ -92,15 +98,46 @@ namespace NotificationHubsSample.Xam.iOS
         /// </list></remarks>
         public override void ReceivedRemoteNotification(UIApplication application, NSDictionary userInfo)
         {
-            Debug.WriteLine(userInfo.ToString());
-            NSObject alertMessage;
+            ProcessNotification(userInfo, false);
+        }
 
-            bool success = userInfo.TryGetValue(new NSString("alert"), out alertMessage);
-
-            if (success)
+        private void ProcessNotification(NSDictionary options, bool fromFinishedLaunching)
+        {
+            // Check to see if the dictionary has the aps key.  This is the notification payload you would have sent
+            if (null != options && options.ContainsKey(new NSString("aps")))
             {
-                var alert = new UIAlertView("Got push notification", alertMessage.ToString(), null, "OK", null);
-                alert.Show();
+                //Get the aps dictionary
+                var aps = options.ObjectForKey(new NSString("aps")) as NSDictionary;
+
+                var alert = string.Empty;
+
+                //Extract the alert text
+                // NOTE: If you're using the simple alert by just specifying 
+                // "  aps:{alert:"alert msg here"}  " this will work fine.
+                // But if you're using a complex alert with Localization keys, etc., 
+                // your "alert" object from the aps dictionary will be another NSDictionary. 
+                // Basically the json gets dumped right into a NSDictionary, 
+                // so keep that in mind.
+                if (aps != null && aps.ContainsKey(new NSString("alert")))
+                {
+                    var nsString = aps[new NSString("alert")] as NSString;
+                    if (nsString != null)
+                    {
+                        alert = nsString.ToString();
+                    }
+                }
+
+                //If this came from the ReceivedRemoteNotification while the app was running,
+                // we of course need to manually process things like the sound, badge, and alert.
+                if (!fromFinishedLaunching)
+                {
+                    //Manually show an alert
+                    if (!string.IsNullOrEmpty(alert))
+                    {
+                        var avAlert = new UIAlertView("Notification", alert, null, "OK", null);
+                        avAlert.Show();
+                    }
+                }
             }
         }
     }

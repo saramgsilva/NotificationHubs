@@ -38,44 +38,4 @@ Public NotInheritable Class SettingsHelper
             End If
         End Set
     End Property
-
-    ''' <summary>
-    ''' Removes all.
-    ''' </summary>
-    Public Shared Sub RemoveAll()
-        LocalSettings.Values.Remove(ChannelUriKey)
-        LocalSettings.Values.Remove(RegistrationIdKey)
-    End Sub
-
-    ''' <summary>
-    ''' Gets or sets the channel URI.
-    ''' </summary>
-    ''' <value>The channel URI.</value>
-    Public Shared Property ChannelUri() As String
-        Get
-            If LocalSettings.Values.ContainsKey(ChannelUriKey) Then
-                Return LocalSettings.Values(ChannelUriKey).ToString()
-            End If
-            Return String.Empty
-        End Get
-        Set(value As String)
-            LocalSettings.Values(ChannelUriKey) = value
-        End Set
-    End Property
-
-    ''' <summary>
-    ''' Gets or sets the registration identifier.
-    ''' </summary>
-    ''' <value>The registration identifier.</value>
-    Public Shared Property RegistrationId() As String
-        Get
-            If LocalSettings.Values.ContainsKey(RegistrationIdKey) Then
-                Return LocalSettings.Values(RegistrationIdKey).ToString()
-            End If
-            Return String.Empty
-        End Get
-        Set(value As String)
-            LocalSettings.Values(RegistrationIdKey) = value
-        End Set
-    End Property
 End Class
