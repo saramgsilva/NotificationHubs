@@ -24,7 +24,11 @@ namespace NotificationHubsSample.Xam.iOS
         // You have 17 seconds to return from this method, or iOS will terminate your application.
         //
         public override bool FinishedLaunching(UIApplication app, NSDictionary options)
-        {
+		{  
+			global::Xamarin.Forms.Forms.Init();
+			LoadApplication(new App());
+			SimpleIoc.Default.Register<IAMSClient, AMSClient>();
+
             if (UIDevice.CurrentDevice.CheckSystemVersion(8, 0))
             {
                 UIApplication.SharedApplication.RegisterUserNotificationSettings(
@@ -41,9 +45,7 @@ namespace NotificationHubsSample.Xam.iOS
                                                                          | UIRemoteNotificationType.Sound);
             }
 
-            global::Xamarin.Forms.Forms.Init();
-            LoadApplication(new App());
-            SimpleIoc.Default.Register<IAMSClient, AMSClient>();
+          
             return base.FinishedLaunching(app, options);
         }
 
@@ -53,14 +55,14 @@ namespace NotificationHubsSample.Xam.iOS
         /// <param name="application">Reference to the UIApplication that invoked this delegate method.</param>
         /// <param name="deviceToken">To be added.</param>
         /// <remarks>To be added.</remarks>
-        public override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
+        public async override void RegisteredForRemoteNotifications(UIApplication application, NSData deviceToken)
         {
             // Modify device token
             DeviceToken = deviceToken.Description;
             DeviceToken = DeviceToken.Trim('<', '>').Replace(" ", "");
             
-            var amsClient = ServiceLocator.Current.GetInstance<IAMSClient>();
-            amsClient.RegisterNativateAsync(DeviceToken);
+			var amsClient = ServiceLocator.Current.GetInstance<IAMSClient>();
+            await amsClient.RegisterNativateAsync(DeviceToken);
         }
 
         /// <summary>
