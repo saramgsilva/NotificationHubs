@@ -16,11 +16,7 @@ namespace NotificationHubsSample.Xam.Droid
             base.OnCreate(bundle);
 
             global::Xamarin.Forms.Forms.Init(this, bundle);
-            LoadApplication(new App());
-
-
-            SimpleIoc.Default.Register<ISettingsService, SettingsService>();
-            SimpleIoc.Default.Register<INotificationHubsService, NotificationHubsService>();
+            LoadApplication(new App(new SettingsService(), new NotificationHubsService()));
 
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             settingsService.Init(this);
