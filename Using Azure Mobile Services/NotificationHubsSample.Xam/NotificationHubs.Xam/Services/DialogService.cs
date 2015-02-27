@@ -3,7 +3,7 @@ using System.Threading.Tasks;
 using GalaSoft.MvvmLight.Views;
 using Xamarin.Forms;
 
-namespace NotificationHubsSample.Xam.Services
+namespace NotificationHubs.Xam.Services
 {
     public class DialogService : IDialogService
     {
