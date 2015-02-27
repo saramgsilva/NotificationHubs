@@ -1,0 +1,9 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage x:Class="NotificationHubs.Xam.MainPage"
+             xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml">
+    <StackLayout>
+        <Label>Insert a Car to receive a Push Notification!</Label>
+        <Button Command="{Binding InsertCommand}" Text="Insert a Car here" />
+    </StackLayout>
+</ContentPage>

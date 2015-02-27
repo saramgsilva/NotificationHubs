@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:ns1="urn:oasis:names:tc:xliff:document:1.2">
+    <!-- From: file:/D:/NB20466/Desktop/Sara%20Top%20Secret%20Project/NotificationHubsSample/app/build/intermediates/exploded-aar/com.android.support/appcompat-v7/21.0.3/res/values-iw/values.xml -->
+    <eat-comment/>
+    <string msgid="4600421777120114993" name="abc_action_bar_home_description">"נווט לדף הבית"</string>
+    <string msgid="1397052879051804371" name="abc_action_bar_home_description_format">"‏%1$s‏, %2$s"</string>
+    <string msgid="6623331958280229229" name="abc_action_bar_home_subtitle_description_format">"‏%1$s‏, %2$s‏, %3$s"</string>
+    <string msgid="1594238315039666878" name="abc_action_bar_up_description">"נווט למעלה"</string>
+    <string msgid="3588849162933574182" name="abc_action_menu_overflow_description">"עוד אפשרויות"</string>
+    <string msgid="4076576682505996667" name="abc_action_mode_done">"בוצע"</string>
+    <string msgid="7468859129482906941" name="abc_activity_chooser_view_see_all">"ראה הכל"</string>
+    <string msgid="2031811694353399454" name="abc_activitychooserview_choose_application">"בחר אפליקציה"</string>
+    <string msgid="3691816814315814921" name="abc_searchview_description_clear">"מחק שאילתה"</string>
+    <string msgid="2550479030709304392" name="abc_searchview_description_query">"שאילתת חיפוש"</string>
+    <string msgid="8264924765203268293" name="abc_searchview_description_search">"חפש"</string>
+    <string msgid="8928215447528550784" name="abc_searchview_description_submit">"שלח שאילתה"</string>
+    <string msgid="893419373245838918" name="abc_searchview_description_voice">"חיפוש קולי"</string>
+    <string msgid="3421042268587513524" name="abc_shareactionprovider_share_with">"שתף עם"</string>
+    <string msgid="7165123711973476752" name="abc_shareactionprovider_share_with_application">"‏שתף עם %s"</string>
+    <!-- From: file:/D:/NB20466/Desktop/Sara%20Top%20Secret%20Project/NotificationHubsSample/app/build/intermediates/exploded-aar/com.google.android.gms/play-services/3.1.59/res/values-iw/strings.xml -->
+    <eat-comment/>
+    <string msgid="3983201110833868073" name="auth_client_needs_enabling_title">"יש אפליקציה המחייבת הפעלה של שירותי Google Play."</string>
+    <string msgid="7999585836145154206" name="auth_client_needs_installation_title">"יש אפליקציה המחייבת התקנה של שירותי Google Play."</string>
+    <string msgid="6488605506794595966" name="auth_client_needs_update_title">"יש אפליקציה המחייבת עדכון של שירותי Google Play."</string>
+    <string msgid="3635065018897986478" name="auth_client_play_services_err_notification_msg">"שגיאה בשירותי Google Play"</string>
+    <string msgid="6304135633531965756" name="auth_client_requested_by_msg">"התבקשה על ידי <ns1:g id="APP_NAME">%1$s</ns1:g>"</string>
+    <string msgid="2534454398764507874" name="auth_client_using_bad_version_title">"יש אפליקציה שניסתה להשתמש בגרסה שגויה של שירותי Google Play."</string>
+    <string msgid="4181637455539816337" name="common_google_play_services_enable_button">"הפעל את שירותי Google Play"</string>
+    <string msgid="7627896071867667758" name="common_google_play_services_enable_text">"יישום זה לא יעבוד אם לא תפעיל את שירותי Google Play."</string>
+    <string msgid="529078775174559253" name="common_google_play_services_enable_title">"הפעלת שירותי Google Play"</string>
+    <string msgid="8515591849428043265" name="common_google_play_services_install_button">"קבל את שירותי Google Play"</string>
+    <string msgid="8685301130651051380" name="common_google_play_services_install_text_phone">"יישום זה לא יפעל ללא שירותי Google Play, החסרים בטלפון שלך."</string>
+    <string msgid="1589957570365247855" name="common_google_play_services_install_text_tablet">"יישום זה לא יפעל ללא שירותי Google Play, החסרים בטאבלט שלך."</string>
+    <string msgid="26645092511305524" name="common_google_play_services_install_title">"קבל את שירותי Google Play"</string>
+    <string msgid="4762332809710093730" name="common_google_play_services_unknown_issue">"בעיה לא ידועה בשירותי Google Play."</string>
+    <string msgid="3542578567569488671" name="common_google_play_services_unsupported_text">"שירותי Google Play, שחלק מהיישומים שלך מתבססים עליהם, אינם נתמכים על ידי המכשיר שברשותך. צור קשר עם היצרן לקבלת סיוע."</string>
+    <string msgid="6334768798839376943" name="common_google_play_services_unsupported_title">"שירותי Google Play"</string>
+    <string msgid="8932944190611227642" name="common_google_play_services_update_button">"עדכן"</string>
+    <string msgid="448354684997260580" name="common_google_play_services_update_text">"יישום זה לא יפעל אם לא תעדכן את שירותי Google Play."</string>
+    <string msgid="6006316683626838685" name="common_google_play_services_update_title">"עדכון שירותי Google Play"</string>
+    <string msgid="9071884888741449141" name="common_signin_button_text">"היכנס"</string>
+    <string msgid="2429381841831957106" name="common_signin_button_text_long">"היכנס באמצעות Google"</string>
+</resources>
