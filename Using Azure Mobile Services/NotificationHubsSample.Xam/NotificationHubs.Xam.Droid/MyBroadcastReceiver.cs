@@ -81,7 +81,7 @@ namespace NotificationHubs.Xam.Droid
             Log.Verbose(MyBroadcastReceiver.Tag, "GCM Registered: " + registrationId);
             RegistrationId = registrationId;
             var amsClient = ServiceLocator.Current.GetInstance<IAMSClient>();
-            await amsClient.RegisterNativateAsync(RegistrationId);
+            await amsClient.RegisterNativeAsync(RegistrationId);
             CreateNotification("GcmService-GCM Registered", "The device has been registered in GCM!");
         }
 

@@ -62,7 +62,7 @@ namespace NotificationHubsSample.Xam.iOS
             DeviceToken = DeviceToken.Trim('<', '>').Replace(" ", "");
             
 			var amsClient = ServiceLocator.Current.GetInstance<IAMSClient>();
-            await amsClient.RegisterNativateAsync(DeviceToken);
+            await amsClient.RegisterNativeAsync(DeviceToken);
         }
 
         /// <summary>
