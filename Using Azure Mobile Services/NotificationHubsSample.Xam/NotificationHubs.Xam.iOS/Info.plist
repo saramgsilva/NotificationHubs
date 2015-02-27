@@ -23,7 +23,7 @@
 	<key>MinimumOSVersion</key>
 	<string>8.0</string>
 	<key>CFBundleDisplayName</key>
-	<string>NotificationHubSample</string>
+	<string>NHApp</string>
 	<key>CFBundleVersion</key>
 	<string>1.0</string>
 	<key>CFBundleIconFiles</key>
@@ -49,6 +49,6 @@
 		<string>remote-notification</string>
 	</array>
 	<key>CFBundleIdentifier</key>
-	<string>pt.merijn.NotificationHubSample</string>
+	<string>pt.sms.NHApp</string>
 </dict>
 </plist>
