@@ -207,7 +207,7 @@ namespace NotificationHubsSample.Controllers
                 
                 var mpsnResult = await _notificationHubClient.SendMpnsNativeNotificationAsync(toastMpns, tag);
 
-                //var appleResult = await _notificationHubClient.SendAppleNativeNotificationAsync(alert, tag);
+                var appleResult = await _notificationHubClient.SendAppleNativeNotificationAsync(alert, tag);
             }
             catch (ArgumentException ex)
             {

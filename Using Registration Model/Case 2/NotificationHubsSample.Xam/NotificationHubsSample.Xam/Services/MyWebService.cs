@@ -23,6 +23,10 @@ namespace NotificationHubsSample.Xam.Services
                 // Get the info that we need to request registration.
                 var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
                 var registrationId = settingsService.RegistratrionId;
+                if (string.IsNullOrEmpty(Platform) || string.IsNullOrEmpty(PnsHandler))
+                {
+                    return "You need to get the PnsHandler!!";
+                }
 
                 // Define a registration to pass in the body of the POST request.
                 var deviceInfo = new DeviceInfo
