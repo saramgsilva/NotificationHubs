@@ -1,10 +1,12 @@
 ﻿using System;
+using System.Diagnostics;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Web.Http;
 using System.Web.Http.Controllers;
 using System.Web.Http.OData;
 using Microsoft.WindowsAzure.Mobile.Service;
+using Newtonsoft.Json;
 using NotificationHubsSample.AMS.DataObjects;
 using NotificationHubsSample.AMS.Models;
 
@@ -85,17 +87,35 @@ namespace NotificationHubsSample.AMS.Controllers
         {
             try
             {
+             
+                Services.Log.Info("Send notification without tag");
+                var resultWns = await Services.Push.SendAsync(PushHelper.GetWindowsPushMessageForToastText01(message));
+                var json = JsonConvert.SerializeObject(resultWns);
+                Debug.WriteLine(json);
+                Services.Log.Info(string.Format("Wns-{0}", json));
+                var resultGcm = await Services.Push.SendAsync(PushHelper.GetGooglePushMessage(message));
+                Services.Log.Info(string.Format("Gcm-{0}", JsonConvert.SerializeObject(resultGcm)));
+                var resultMpns = await Services.Push.SendAsync(PushHelper.GetMPNSMessage(message));
+                Services.Log.Info(string.Format("Mnps-{0}", JsonConvert.SerializeObject(resultMpns)));
+                var resultApns = await Services.Push.SendAsync(PushHelper.GetApplePushMessage(message));
+                Services.Log.Info(string.Format("Apns-{0}", JsonConvert.SerializeObject(resultApns)));
+                
                 await Services.Push.SendAsync(PushHelper.GetWindowsPushMessageForToastText01(message));
                 await Services.Push.SendAsync(PushHelper.GetGooglePushMessage(message));
                 await Services.Push.SendAsync(PushHelper.GetMPNSMessage(message));
-                // await Services.Push.SendAsync(PushHelper.GetApplePushMessage(message));
+                await Services.Push.SendAsync(PushHelper.GetApplePushMessage(message));
 
+                Services.Log.Info("Send notification using someTag");
                 const string otherMessage = "A second tag was added in AMS.";
 
-                await Services.Push.SendAsync(PushHelper.GetWindowsPushMessageForToastText01(otherMessage), NotificationHandler.SomeTag);
-                await Services.Push.SendAsync(PushHelper.GetGooglePushMessage(otherMessage), NotificationHandler.SomeTag);
-                await Services.Push.SendAsync(PushHelper.GetMPNSMessage(otherMessage), NotificationHandler.SomeTag);
-                // await Services.Push.SendAsync(PushHelper.GetApplePushMessage(otherMessage), NotificationHandler.SomeTag);
+               resultWns = await Services.Push.SendAsync(PushHelper.GetWindowsPushMessageForToastText01(otherMessage), NotificationHandler.SomeTag);
+               Services.Log.Info(string.Format("Wns-{0}",JsonConvert.SerializeObject(resultWns)));
+               resultGcm = await Services.Push.SendAsync(PushHelper.GetGooglePushMessage(otherMessage), NotificationHandler.SomeTag);
+               Services.Log.Info(string.Format("Gcm-{0}", JsonConvert.SerializeObject(resultGcm)));
+               resultMpns = await Services.Push.SendAsync(PushHelper.GetMPNSMessage(otherMessage), NotificationHandler.SomeTag);
+               Services.Log.Info(string.Format("Mnps-{0}", JsonConvert.SerializeObject(resultMpns)));
+               resultApns = await Services.Push.SendAsync(PushHelper.GetApplePushMessage(otherMessage), NotificationHandler.SomeTag);
+               Services.Log.Info(string.Format("Apns-{0}", JsonConvert.SerializeObject(resultApns)));
             }
             catch (Exception exception)
             {
