@@ -16,11 +16,17 @@ namespace NotificationHubs.Xam
 
             // define the navigation
             var nav = new NavigationService();
-            SimpleIoc.Default.Register<INavigationService>(() => nav);
+            if (!SimpleIoc.Default.IsRegistered<INavigationService>())
+            {
+                SimpleIoc.Default.Register<INavigationService>(() => nav);
+            }
 
             // define the dialog service
             var dialog = new DialogService();
-            SimpleIoc.Default.Register<IDialogService>(() => dialog);
+            if (!SimpleIoc.Default.IsRegistered<IDialogService>())
+            {
+                SimpleIoc.Default.Register<IDialogService>(() => dialog);
+            }
 
             var navPage = new NavigationPage(new MainPage());
 

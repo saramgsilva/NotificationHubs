@@ -9,9 +9,10 @@ namespace NotificationHubsSample.AMS
     public class NotificationHandler : INotificationHandler
     {
         internal const string SomeTag = "sometag";
-
+        
         public Task Register(ApiServices services, HttpRequestContext context, NotificationRegistration registration)
         {
+            // other another tag
             registration.Tags.Add(SomeTag);
             return Task.FromResult(true);
         }
