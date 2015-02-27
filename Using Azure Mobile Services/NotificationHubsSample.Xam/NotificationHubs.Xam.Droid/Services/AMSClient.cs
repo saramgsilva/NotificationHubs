@@ -18,7 +18,7 @@ namespace NotificationHubs.Xam.Droid.Services
             return car;
         }
 
-        public async Task RegisterNativateAsync(string pnsHandler)
+        public async Task RegisterNativeAsync(string pnsHandler)
         {
             // Register for push with Mobile Services
             var tags = new List<string> { "userId" };

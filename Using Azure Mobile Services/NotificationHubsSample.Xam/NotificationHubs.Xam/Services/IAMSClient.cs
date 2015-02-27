@@ -6,6 +6,6 @@ namespace NotificationHubs.Xam.Services
     public interface IAMSClient
     {
         Task<Car> InsertAsync(Car car);
-        Task RegisterNativateAsync(string pnsHandler);
+        Task RegisterNativeAsync(string pnsHandler);
     }
 }
