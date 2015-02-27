@@ -23,7 +23,7 @@ namespace NotificationHubs.Xam.Droid.Services
             // Register for push with Mobile Services
             var tags = new List<string> { "userId" };
 
-            await Client.GetPush().RegisterNativeAsync(pnsHandler);
+			await Client.GetPush().RegisterNativeAsync(pnsHandler,tags);
 
             // To register devices using tags
             // var tags = new List<string>();

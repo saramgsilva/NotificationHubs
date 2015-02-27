@@ -3,8 +3,6 @@
   <PropertyGroup>
     <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
     <Platform Condition=" '$(Platform)' == '' ">iPhoneSimulator</Platform>
-    <ProductVersion>8.0.30703</ProductVersion>
-    <SchemaVersion>2.0</SchemaVersion>
     <ProjectGuid>{1AF64E08-00B6-49DB-A370-602658313211}</ProjectGuid>
     <ProjectTypeGuids>{FEACFBD2-3405-455C-9665-78FE426C6842};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <OutputType>Exe</OutputType>
@@ -50,9 +48,14 @@
     <WarningLevel>4</WarningLevel>
     <ConsolePause>false</ConsolePause>
     <MtouchArch>ARMv7, ARM64</MtouchArch>
-    <CodesignKey>iPhone Developer</CodesignKey>
+    <CodesignKey>iPhone Developer: Merijn Hoogeveen (8L24J522B7)</CodesignKey>
     <MtouchDebug>true</MtouchDebug>
     <CodesignEntitlements>Entitlements.plist</CodesignEntitlements>
+    <CodesignProvision>5572c88e-a5e5-4941-b067-df221b279fa9</CodesignProvision>
+    <IpaPackageName>
+    </IpaPackageName>
+    <MtouchI18n>
+    </MtouchI18n>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|iPhone' ">
     <DebugType>none</DebugType>
@@ -101,8 +104,8 @@
     <None Include="Info.plist" />
     <Compile Include="Properties\AssemblyInfo.cs" />
     <ITunesArtwork Include="iTunesArtwork" />
-    <ITunesArtwork Include="iTunesArtwork@2x" />
     <None Include="packages.config" />
+    <ITunesArtwork Include="iTunesArtwork%402x" />
   </ItemGroup>
   <ItemGroup>
     <BundleResource Include="Resources\Default-568h%402x.png" />
@@ -125,7 +128,6 @@
   <ItemGroup>
     <Reference Include="GalaSoft.MvvmLight">
       <HintPath>..\..\packages\MvvmLightLibs.5.1.1.0\lib\xamarin.ios10\GalaSoft.MvvmLight.dll</HintPath>
-      <Private>True</Private>
     </Reference>
     <Reference Include="GalaSoft.MvvmLight.Extras">
       <HintPath>..\..\packages\MvvmLightLibs.5.1.1.0\lib\xamarin.ios10\GalaSoft.MvvmLight.Extras.dll</HintPath>
@@ -168,14 +170,14 @@
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\NotificationHubs.Xam\NotificationHubs.Xam.csproj">
-      <Project>{bce8ba97-68f2-48e3-97a8-c31c9dc2354c}</Project>
+      <Project>{BCE8BA97-68F2-48E3-97A8-C31C9DC2354C}</Project>
       <Name>NotificationHubs.Xam</Name>
     </ProjectReference>
   </ItemGroup>
   <ItemGroup>
     <XamarinComponentReference Include="azure-mobile-services">
-      <Visible>False</Visible>
       <Version>1.3.1</Version>
+      <Visible>False</Visible>
     </XamarinComponentReference>
   </ItemGroup>
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.CSharp.targets" />

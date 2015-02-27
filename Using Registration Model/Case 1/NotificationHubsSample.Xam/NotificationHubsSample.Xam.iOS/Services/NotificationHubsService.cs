@@ -3,6 +3,7 @@ using WindowsAzure.Messaging;
 using Foundation;
 using Microsoft.Practices.ServiceLocation;
 using NotificationHubsSample.Xam.Services;
+using System;
 
 namespace NotificationHubsSample.Xam.iOS.Services
 {
@@ -27,14 +28,21 @@ namespace NotificationHubsSample.Xam.iOS.Services
         {
             var settingsService = ServiceLocator.Current.GetInstance<ISettingsService>();
             // create tags if you want
-            var tags = new NSSet(settingsService.Tags);
-            _hub.RegisterNativeAsync(PnsHandler, tags, errorCallback =>
-            {
-                if (errorCallback != null)
-                {
-                    Debug.WriteLine("RegisterNativeAsync error: " + errorCallback.ToString());
-                }
-            });
+			var tags = new NSSet(settingsService.Tags.ToArray());
+           
+
+			_hub.UnregisterAllAsync (PnsHandler, (error) => {
+				if (error != null) 
+				{
+					Console.WriteLine("Error calling Unregister: {0}", error.ToString());
+					return;
+				} 
+
+				_hub.RegisterNativeAsync(PnsHandler, tags, (errorCallback) => {
+					if (errorCallback != null)
+						Console.WriteLine("RegisterNativeAsync error: " + errorCallback.ToString());
+				});
+			});
         }
     }
 }
