@@ -12,8 +12,12 @@ namespace NotificationHubsSample
         // -------  Azure app specific connection string and hub name
 		// This is only used in Case 1 and Case 2
 	    public const string HubName  = "<to define>";
-		        		
+		  
+        // This is only used in Case 1
+        public const string ConnectionString  = "<to define>";
+      
+		
         // This is only used in Case 2 (WebAPI)
-        public const string BackEndConnectionString  = "<to define>";		
-    }
+        public const string BackEndConnectionString  = "<to define>";
+	}
 }
