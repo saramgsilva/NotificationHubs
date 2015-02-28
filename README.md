@@ -94,6 +94,11 @@ Cordova |  :x:  | :x: | :x: |
 
 * [Curah! Azure Notification Hubs] (https://curah.microsoft.com/72603/notification-hubs)
 
+* [Azure Mobile Services: Add support for Push Notification](http://www.saramgsilva.com/index.php/2014/microsofts-windows-appstudio-add-support-for-push-notification/)
+
+* [Azure Notification Hubs - Diagnosis guidelines](http://azure.microsoft.com/en-us/documentation/articles/notification-hubs-diagnosing/)
+
+* [Debugging Notification Hubs](https://msdn.microsoft.com/library/azure/dn530751.aspx)
 
 ## :white_medium_square: Common Issues
 
@@ -159,15 +164,13 @@ To develop on this project, just clone the project to your computer, package res
 
 ## :white_medium_square: Contributors
 
-
 <MTMarkdownOptions output='html4'>
-     	<a href="https://twitter.com/saramgsilva"><img src="http://saramgsilva.github.io/NotificationHubs/images/Eu_400x400.png" height="50"/></a>
-		<a href="https://twitter.com/paulomorgado"><img src="http://saramgsilva.github.io/NotificationHubs/images/PauloMorgado_320x240_400x400.jpg" height="50"/></a>
-		<a href="https://twitter.com/adpead"><img src="http://saramgsilva.github.io/NotificationHubs/images/gn8frj8ipi0rsntcvcd0_400x400.jpeg"/ height="50"></a>
-		<a href="https://twitter.com/clerigo"><img src="http://saramgsilva.github.io/NotificationHubs/images/EbslN-rW_400x400.jpeg"/ height="50"></a>	</p>
-</MTMarkdownOptions>  
-		<a href="https://twitter.com/Totemika"><img src="http://s20.postimg.org/77ylj1vj1/Nz2_Jo_RA2_400x400.jpg"/ height="50"></a>	</p>
-</MTMarkdownOptions>  
+<a href="https://twitter.com/saramgsilva"><img src="http://saramgsilva.github.io/NotificationHubs/images/Eu_400x400.png" height="50"/></a>
+<a href="https://twitter.com/paulomorgado"><img src="http://saramgsilva.github.io/NotificationHubs/images/PauloMorgado_320x240_400x400.jpg" height="50"/></a>
+<a href="https://twitter.com/adpead"><img src="http://saramgsilva.github.io/NotificationHubs/images/gn8frj8ipi0rsntcvcd0_400x400.jpeg"/ height="50"></a>
+<a href="https://twitter.com/clerigo"><img src="http://saramgsilva.github.io/NotificationHubs/images/EbslN-rW_400x400.jpeg"/ height="50"></a>
+</MTMarkdownOptions><a href="https://twitter.com/Totemika"><img src="http://s20.postimg.org/77ylj1vj1/Nz2_Jo_RA2_400x400.jpg"/ height="50"></a>	</p>
+</MTMarkdownOptions>  	</p>
 
 
 ## :white_medium_square: Contribute
