@@ -133,6 +133,12 @@ The following list provide some common issues I found when I did the sample or e
 * The manifest file must have the package's name starting with lower case;
 * The key used in the payload is not the same in the application;
 
+### In iOS apps:
+
+* To enable push notification is required the certificates that enable it. The process is not simple to create it and it is easy to do a mess between steps;
+* Developers should confirm which version of the certificate is on Azure Portal and it is used by application. This means if in Azure Portal has the production certificate the application must have the production certificate;
+* The plist must have the push notification checked and the bundle must match with the bounded created;
+
 
 ## :white_medium_square: Tips
 
