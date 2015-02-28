@@ -62,7 +62,7 @@ Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_m
 Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
 :---------- | :------------------------ | :------------------------ | :------------------------ | 
 Xamarin Android | :white_check_mark: |  :white_check_mark:  | :white_check_mark:   | 
-Xamarin IOS | :white_check_mark:  |  :white_check_mark: | :wrench:| 
+Xamarin IOS | :white_check_mark:  |  :white_check_mark: | :white_check_mark: | 
 
 
 #### Others
@@ -165,6 +165,8 @@ To develop on this project, just clone the project to your computer, package res
 		<a href="https://twitter.com/paulomorgado"><img src="http://saramgsilva.github.io/NotificationHubs/images/PauloMorgado_320x240_400x400.jpg" height="50"/></a>
 		<a href="https://twitter.com/adpead"><img src="http://saramgsilva.github.io/NotificationHubs/images/gn8frj8ipi0rsntcvcd0_400x400.jpeg"/ height="50"></a>
 		<a href="https://twitter.com/clerigo"><img src="http://saramgsilva.github.io/NotificationHubs/images/EbslN-rW_400x400.jpeg"/ height="50"></a>	</p>
+</MTMarkdownOptions>  
+		<a href="https://twitter.com/Totemika"><img src="http://s20.postimg.org/77ylj1vj1/Nz2_Jo_RA2_400x400.jpg"/ height="50"></a>	</p>
 </MTMarkdownOptions>  
 
 
