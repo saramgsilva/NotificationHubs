@@ -5,11 +5,11 @@
 * [Requirements](https://github.com/saramgsilva/NotificationHubs#white_medium_square-requirements)
 * [Sample Status](https://github.com/saramgsilva/NotificationHubs#white_medium_square-sample-status)
 * [The Source Code](https://github.com/saramgsilva/NotificationHubs#white_medium_square-the-source-code)
+* [Build project](https://github.com/saramgsilva/NotificationHubs#white_medium_square-build-projects)
 * [Screenshots](https://github.com/saramgsilva/NotificationHubs#white_medium_square-screenshots)
 * [Resources](https://github.com/saramgsilva/NotificationHubs#white_medium_square-resources)
 * [Common Issues](https://github.com/saramgsilva/NotificationHubs#white_medium_square-common-issues)
 * [Tips](https://github.com/saramgsilva/NotificationHubs#white_medium_square-tips)
-* [Build the project](https://github.com/saramgsilva/NotificationHubs#white_medium_square-build-the-project)
 * [Contributors](https://github.com/saramgsilva/NotificationHubs#white_medium_square-contributors)
 * [Contribute](https://github.com/saramgsilva/NotificationHubs#white_medium_square-contribute)
 * [License](https://github.com/saramgsilva/NotificationHubs#white_medium_square-license)
@@ -84,7 +84,26 @@ Cordova |  :x:  | :x: | :x: |
 
 ## :white_medium_square: The Source Code
 
-:warning: Available soon
+
+
+## :white_medium_square: Build the projects
+
+
+To develop on this project, just clone the project to your computer, package restore is enable so build the solution first, if you get any errors try to build again and if necessary close the solution and open again to load the references.
+
+
+:warning: Change required before run each sample
+
+The Contants.cs file should be defined, which:
+
+- SenderID: define the ProjectID used in Xamarin Android and Android projects to request a registrationId from Google Cloud Messaging (GCM)
+- HubName: define the Notification Hub's name created in Azure Portal
+- ConnectionString: define the Notification Hub's connection string for the client applications connect with Notification Hub.
+- BackEndConnectionString: define the Notification Hub's connection string for the backend connect with Notification Hub.
+
+- AMSEndpoint: define the url from the Azure Mobile Services, used by the client application when create the object to connect with Azure Mobile Services
+
+- AMSKey: define the admin key used by the client application when create the object to connect with Azure Mobile Services.
 
 
 ## :white_medium_square: Resources
@@ -161,13 +180,6 @@ IOS | Apple Push Notification Service (APNs)
 If you are using simulator and do the deploy for install the app or debug it, you can receive Push Notification while the app run, but if you stop and try to send another Push Notification the simulator will not receive it, you should run again the app without VS to get the push notification
 
 
-## :white_medium_square: Build the project
-
-
-To develop on this project, just clone the project to your computer, package restore is enable so build the solution first, if you get any errors try to build again and if necessary close the solution and open again to load the references.
-
-
-
 ## :white_medium_square: Contributors
 
 <MTMarkdownOptions output='html4'>
@@ -182,7 +194,7 @@ To develop on this project, just clone the project to your computer, package res
 ## :white_medium_square: Contribute
 
 
-Everbody is welcome to contribute, only is required to provide all cases to manage devices in [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation/services/notification-hubs/).
+Everbody is welcome to contribute.
 
 Twitter hashtag : [#notificationhubs](https://twitter.com/search?q=%23notificationhubs&src=typd)
 
