@@ -84,6 +84,22 @@ Cordova |  :x:  | :x: | :x: |
 
 ## :white_medium_square: The Source Code
 
+The sample has the following project's struture:
+
+* Shared
+* BackEnd
+* Windows 
+  * CSharp
+     * Windows Phone 8.1 (WinRT)
+     * Windows Store Apps (WinRT)
+     * Windows Phone 8.1 (SL)
+  * Visual Basic
+     * Windows Phone 8.1 (WinRT)
+     * Windows Store Apps (WinRT)
+     * Windows Phone 8.1 (SL)
+* Xamarin 
+   * Xamarin.Android
+   * Xamarin.IOS
 
 
 ## :white_medium_square: Build the projects
@@ -161,6 +177,19 @@ The following list provide some common issues I found when I did the sample or e
 
 ## :white_medium_square: Tips
 
+### Azure Notification Hubs API used in Case 2 sample
+
+Platform | Azure Notification Hubs API 
+:---------- | :------------------------
+Windows Store 8.1 (WinRT) | [WindowsAzure.Messaging.Managed](https://www.nuget.org/packages/WindowsAzure.Messaging.Managed/)
+Windows Phone 8.1 (WinRT) | [WindowsAzure.Messaging.Managed](https://www.nuget.org/packages/WindowsAzure.Messaging.Managed/)
+Windows Phone 8.1 (SL)| [WindowsAzure.Messaging.Managed](https://www.nuget.org/packages/WindowsAzure.Messaging.Managed/)
+Xamarin Android | [Azure Messaging](https://components.xamarin.com/view/azure-messaging)
+Xamarin IOS | [Azure Messaging](https://components.xamarin.com/view/azure-messaging)
+
+### Azure Notification Hubs API used in Azure Mobile Service sample
+
+[Windows Azure Mobile Services](https://www.nuget.org/packages/WindowsAzure.MobileServices/) 
 
 ### Push Notification Service by Platform
 
@@ -173,7 +202,48 @@ Windows Phone 8.0 (SL)| Microsoft Push Notification Service (MPNS)
 Android | Google Cloud Service (GCM)
 IOS | Apple Push Notification Service (APNs)
 
+#### Push Notification Templates by platform
 
+##### Windows Phone 8.1 and Windows Store apps (WinRT)
+
+```
+var payload = new XElement("toast",
+                         new XElement("visual",
+                            new XElement("binding",
+                                new XAttribute("template", "ToastText01"),
+                                new XElement("text",
+                                    new XAttribute("id", "1"), message)))).ToString(SaveOptions.DisableFormatting);
+```
+
+##### Windows Phone 8.1 SL
+
+```
+var mpnsPushMessage  = new MpnsPushMessage(toast);
+        XNamespace wp = "WPNotification";
+        XDocument doc = new XDocument(new XDeclaration("1.0", "utf-8", null),
+            new XElement(wp + "Notification", new XAttribute(XNamespace.Xmlns + "wp", "WPNotification"),
+                new XElement(wp + "Toast",
+                    new XElement(wp + "Text1",
+                         "Notification Hubs Sample"),
+                    new XElement(wp + "Text2", message))));
+
+var xmlPayload = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
+```
+
+##### IOS
+```
+var alert =new JObject(
+                new JProperty("aps", new JObject(new JProperty("alert", notificationText))),
+                new JProperty("inAppMessage", notificationText))
+                .ToString(Newtonsoft.Json.Formatting.None);
+```
+
+##### Android
+```
+var payload = new JObject(
+                    new JProperty("data", new JObject(new JProperty("message", notificationText))))
+                    .ToString(Newtonsoft.Json.Formatting.None);
+```
 
 ### Development In Xamarin.Android
 
