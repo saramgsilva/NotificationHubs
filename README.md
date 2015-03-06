@@ -2,11 +2,10 @@
 
 ## :white_medium_square: Table of contents
 * [What is this?](https://github.com/saramgsilva/NotificationHubs#white_medium_square-what-is-this)
-* [Requirements](https://github.com/saramgsilva/NotificationHubs#white_medium_square-requirements)
 * [Sample Status](https://github.com/saramgsilva/NotificationHubs#white_medium_square-sample-status)
+* [Requirements](https://github.com/saramgsilva/NotificationHubs#white_medium_square-requirements)
 * [The Source Code](https://github.com/saramgsilva/NotificationHubs#white_medium_square-the-source-code)
 * [Build project](https://github.com/saramgsilva/NotificationHubs#white_medium_square-build-projects)
-* [Screenshots](https://github.com/saramgsilva/NotificationHubs#white_medium_square-screenshots)
 * [Resources](https://github.com/saramgsilva/NotificationHubs#white_medium_square-resources)
 * [Common Issues](https://github.com/saramgsilva/NotificationHubs#white_medium_square-common-issues)
 * [Tips](https://github.com/saramgsilva/NotificationHubs#white_medium_square-tips)
@@ -21,10 +20,10 @@ through [Azure Notification Hubs](http://azure.microsoft.com/en-us/documentation
 and this sample supports:
 
 * The two main ways to manage devices in Azure Notification Hubs, using the Registration Model:
-	* Case 1 - Devices register directly in Azure Notification Hubs 
-	* Case 2 - Devices register in Azure Notification Hubs through backend
+	* **Case 1 - Devices register directly in Azure Notification Hubs**
+	* **Case 2 - Devices register in Azure Notification Hubs through backend**
 	
-* Azure Mobile Services;
+* **Azure Mobile Services**;
 
 
 ## :white_medium_square: Sample Status
@@ -34,36 +33,36 @@ and this sample supports:
 
 ##### Windows Applications - Using XAML / CSharp
 
-Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
+**Platform** |  **Azure Mobile Services**|  **Registration Model (Case1)** |  **Registration Model (Case2)**  |
 :---------- | :------------------------ | :------------------------ | :------------------------ | 
-Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: 
-Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   
-Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:
+**Windows Store 8.1 (WinRT)** | :white_check_mark:  | :white_check_mark: | :white_check_mark: 
+**Windows Phone 8.1 (WinRT)** | :white_check_mark: | :white_check_mark:   | :white_check_mark:   
+**Windows Phone 8.1 (SL)**| :white_check_mark: | :white_check_mark: | :white_check_mark:
 
 
 ##### Windows Applications - Using XAML / Visual Basic
 
-Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
+**Platform** |  **Azure Mobile Services**|  **Registration Model (Case1)** |  **Registration Model (Case2)**  |
 :---------- | :------------------------ | :------------------------ | :------------------------ |
-Windows Store 8.1 (WinRT) | :white_check_mark:  | :white_check_mark: | :white_check_mark: 
-Windows Phone 8.1 (WinRT) | :white_check_mark: | :white_check_mark:   | :white_check_mark:   
-Windows Phone 8.1 (SL)| :white_check_mark: | :white_check_mark: | :white_check_mark:
+**Windows Store 8.1 (WinRT)** | :white_check_mark:  | :white_check_mark: | :white_check_mark: 
+**Windows Phone 8.1 (WinRT)** | :white_check_mark: | :white_check_mark:   | :white_check_mark:   
+**Windows Phone 8.1 (SL)**| :white_check_mark: | :white_check_mark: | :white_check_mark:
 
 ##### Xamarin Applications
 
-Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
+**Platform** |  **Azure Mobile Services**|  **Registration Model (Case1)** |  **Registration Model (Case2)**  |
 :---------- | :------------------------ | :------------------------ | :------------------------ | 
-Xamarin Android | :white_check_mark: |  :white_check_mark:  | :white_check_mark:   | 
-Xamarin IOS | :white_check_mark:  |  :white_check_mark: | :white_check_mark: | 
+**Xamarin Android** | :white_check_mark: |  :white_check_mark:  | :white_check_mark:   | 
+**Xamarin IOS** | :white_check_mark:  |  :white_check_mark: | :white_check_mark: | 
 
 
 #### Others
 
-Platform |  Azure Mobile Services|  Registration Model (Case1) |  Registration Model (Case2)  |
+**Platform** |  **Azure Mobile Services**|  **Registration Model (Case1)** |  **Registration Model (Case2)**  |
 :---------- | :------------------------ | :------------------------ | :------------------------ | 
-Android Native | :white_check_mark: | :x:| :x: | 
-IOS Native | :x:  |:white_check_mark:| :x:| 
-Cordova |  :x:  | :x: | :x: |  
+**Android Native** | :white_check_mark: | :x:| :x: | 
+**IOS Native** | :x:  |:white_check_mark:| :x:| 
+**Cordova** |  :x:  | :x: | :x: |  
 
 
 :warning: Notes:
@@ -87,14 +86,14 @@ Cordova |  :x:  | :x: | :x: |
 
 The **Contants.cs** file should be defined, which:
 
-- SenderID: define the ProjectID used in Xamarin Android and Android projects to request a registrationId from Google Cloud Messaging (GCM)
-- HubName: define the Notification Hub's name created in Azure Portal
-- ConnectionString: define the Notification Hub's connection string for the client applications connect with Notification Hub.
-- BackEndConnectionString: define the Notification Hub's connection string for the backend connect with Notification Hub.
+- **SenderID**: define the ProjectID used in Xamarin Android and Android projects to request a registrationId from Google Cloud Messaging (GCM)
+- **HubName**: define the Notification Hub's name created in Azure Portal
+- **ConnectionString**: define the Notification Hub's connection string for the client applications connect with Notification Hub.
+- **BackEndConnectionString**: define the Notification Hub's connection string for the backend connect with Notification Hub.
 
-- AMSEndpoint: define the url from the Azure Mobile Services, used by the client application when create the object to connect with Azure Mobile Services
+- **AMSEndpoint**: define the url from the Azure Mobile Services, used by the client application when create the object to connect with Azure Mobile Services
 
-- AMSKey: define the admin key used by the client application when create the object to connect with Azure Mobile Services.
+- **AMSKey**: define the admin key used by the client application when create the object to connect with Azure Mobile Services.
 
 
 ## :white_medium_square: The Source Code
@@ -140,7 +139,7 @@ To develop on this project, just clone the project to your computer, package res
 
 The following list provide some common issues I found when I did the sample or even when help others developers.
 
-### In General  
+**In General**
 
 * The connection string from Notification Hubs is wrong;
 * The xml/json that define the template are not well defined;
