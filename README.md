@@ -27,14 +27,6 @@ and this sample supports:
 * Azure Mobile Services;
 
 
-## :white_medium_square: Requirements
-
-
-* Create the Azure Notification Hubs in Azure Portal (Azure Mobile Service create it by default)
-* Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification for each Platform
-* Configure the Azure Notification Hub, in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
-* Add connection string and hub name from the Azure Notification Hub created (in the sample it is defined in Contants.cs file
-
 ## :white_medium_square: Sample Status
 
 
@@ -82,6 +74,29 @@ Cordova |  :x:  | :x: | :x: |
 
 
 
+## :white_medium_square: Requirements
+
+
+* Create the Azure Notification Hubs in Azure Portal (Azure Mobile Service create it by default)
+* Create the required data, in Push Notification Service (WNS, GCM, APNs...), to support push notification for each Platform
+* Configure the Azure Notification Hub, in Azure Portal, with the data from Push Notification Services (WNS, GCM, APNs...)
+* Add connection string and hub name from the Azure Notification Hub created (in the sample it is defined in Contants.cs file
+
+
+:warning: Change required before run each sample
+
+The Contants.cs file should be defined, which:
+
+- SenderID: define the ProjectID used in Xamarin Android and Android projects to request a registrationId from Google Cloud Messaging (GCM)
+- HubName: define the Notification Hub's name created in Azure Portal
+- ConnectionString: define the Notification Hub's connection string for the client applications connect with Notification Hub.
+- BackEndConnectionString: define the Notification Hub's connection string for the backend connect with Notification Hub.
+
+- AMSEndpoint: define the url from the Azure Mobile Services, used by the client application when create the object to connect with Azure Mobile Services
+
+- AMSKey: define the admin key used by the client application when create the object to connect with Azure Mobile Services.
+
+
 ## :white_medium_square: The Source Code
 
 The sample has the following project's struture:
@@ -106,20 +121,6 @@ The sample has the following project's struture:
 
 
 To develop on this project, just clone the project to your computer, package restore is enable so build the solution first, if you get any errors try to build again and if necessary close the solution and open again to load the references.
-
-
-:warning: Change required before run each sample
-
-The Contants.cs file should be defined, which:
-
-- SenderID: define the ProjectID used in Xamarin Android and Android projects to request a registrationId from Google Cloud Messaging (GCM)
-- HubName: define the Notification Hub's name created in Azure Portal
-- ConnectionString: define the Notification Hub's connection string for the client applications connect with Notification Hub.
-- BackEndConnectionString: define the Notification Hub's connection string for the backend connect with Notification Hub.
-
-- AMSEndpoint: define the url from the Azure Mobile Services, used by the client application when create the object to connect with Azure Mobile Services
-
-- AMSKey: define the admin key used by the client application when create the object to connect with Azure Mobile Services.
 
 
 ## :white_medium_square: Resources
