@@ -85,7 +85,7 @@ Cordova |  :x:  | :x: | :x: |
 
 :warning: Change required before run each sample
 
-The Contants.cs file should be defined, which:
+The **Contants.cs** file should be defined, which:
 
 - SenderID: define the ProjectID used in Xamarin Android and Android projects to request a registrationId from Google Cloud Messaging (GCM)
 - HubName: define the Notification Hub's name created in Azure Portal
