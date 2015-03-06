@@ -149,18 +149,18 @@ The following list provide some common issues I found when I did the sample or e
 * When developers implement the registration in devices do not use the debug feature to verify if the devices was registered correctly; 
 * Developers implements the Case 1 when they want to implement the Case 2 and mixes the two cases;
 
-### In Windows (WinRT) apps:
+**In Windows (WinRT) apps:**
 
 * In manifest should be defined the Toast capable;
 * In manifest should be defined the Internet capability;
 * Associate with store;
 
-### In Windows Phone (SL) apps:
+**In Windows Phone (SL) apps:**
 
 * In manifest should be defined Internet capability, Toast capable and the ID_CAP_PushNotification
 * Should be handled the notification when the app is running
 
-### In Android apps:
+**In Android apps:**
 
 * The Project Id is wrong;
 * The GCM component is missing;
@@ -168,7 +168,7 @@ The following list provide some common issues I found when I did the sample or e
 * The manifest file must have the package's name starting with lower case;
 * The key used in the payload is not the same in the application;
 
-### In iOS apps:
+**In iOS apps:**
 
 * To enable push notification is required the certificates that enable it. The process is not simple to create it and it is easy to do a mess between steps;
 * Developers should confirm which version of the certificate is on Azure Portal and it is used by application. This means if in Azure Portal has the production certificate the application must have the production certificate;
@@ -177,7 +177,9 @@ The following list provide some common issues I found when I did the sample or e
 
 ## :white_medium_square: Tips
 
-### Azure Notification Hubs API used in Case 2 sample
+#### Azure Notification Hubs API
+
+**Used in Case 2 sample**
 
 Platform | Azure Notification Hubs API 
 :---------- | :------------------------
@@ -187,11 +189,11 @@ Windows Phone 8.1 (SL)| [WindowsAzure.Messaging.Managed](https://www.nuget.org/p
 Xamarin Android | [Azure Messaging](https://components.xamarin.com/view/azure-messaging)
 Xamarin IOS | [Azure Messaging](https://components.xamarin.com/view/azure-messaging)
 
-### Azure Notification Hubs API used in Azure Mobile Service sample
+**Used in Azure Mobile Service sample**
 
 [Windows Azure Mobile Services](https://www.nuget.org/packages/WindowsAzure.MobileServices/) 
 
-### Push Notification Service by Platform
+####  Push Notification Service by Platform
 
 Platform | Push Notification Service 
 :---------- | :------------------------ 
@@ -204,7 +206,7 @@ IOS | Apple Push Notification Service (APNs)
 
 #### Push Notification Templates by platform
 
-##### Windows Phone 8.1 and Windows Store apps (WinRT)
+**Windows Phone 8.1 and Windows Store apps (WinRT)**
 
 ```
 var payload = new XElement("toast",
@@ -215,7 +217,7 @@ var payload = new XElement("toast",
                                     new XAttribute("id", "1"), message)))).ToString(SaveOptions.DisableFormatting);
 ```
 
-##### Windows Phone 8.1 SL
+**Windows Phone 8.1 SL**
 
 ```
 var mpnsPushMessage  = new MpnsPushMessage(toast);
@@ -230,7 +232,7 @@ var mpnsPushMessage  = new MpnsPushMessage(toast);
 var xmlPayload = string.Concat(doc.Declaration, doc.ToString(SaveOptions.DisableFormatting));
 ```
 
-##### IOS
+**IOS**
 ```
 var alert =new JObject(
                 new JProperty("aps", new JObject(new JProperty("alert", notificationText))),
@@ -238,7 +240,7 @@ var alert =new JObject(
                 .ToString(Newtonsoft.Json.Formatting.None);
 ```
 
-##### Android
+**Android**
 ```
 var payload = new JObject(
                     new JProperty("data", new JObject(new JProperty("message", notificationText))))
