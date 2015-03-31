@@ -1,5 +1,12 @@
 # Azure Notification Hubs Sample
 
+This sample is related to the article from MSDN Magazine (April 2015):
+
+> Azure Notification Hubs: Best Pratices Managing Devices
+
+<MTMarkdownOptions output='html4'>
+<a href="https://msdn.microsoft.com/en-us/magazine/ee310108.aspx"><img src="http://s20.postimg.org/ayjtmjbh9/MSDNMagazine_2.png" height="400"/></a>
+
 ## :white_medium_square: Table of contents
 * [What is this?](https://github.com/saramgsilva/NotificationHubs#white_medium_square-what-is-this)
 * [Sample Status](https://github.com/saramgsilva/NotificationHubs#white_medium_square-sample-status)
