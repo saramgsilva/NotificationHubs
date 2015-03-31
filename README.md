@@ -186,6 +186,8 @@ The following list provide some common issues I found when I did the sample or e
 
 #### Azure Notification Hubs API
 
+:warning: It was published a new nuget: [Microsoft Azure Notification Hubs](https://www.nuget.org/packages/Microsoft.Azure.NotificationHubs/)
+
 **Used in Case 2 sample**
 
 Platform | Azure Notification Hubs API 
